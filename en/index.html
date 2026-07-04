@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESORA EA SERIES ― LAUREL / LIORA / PHILIA</title>
+<meta name="description" content="Every strategy has a personality. Three Japanese-built EAs — all results public on Myfxbook, including the drawdowns.">
+<meta property="og:title" content="ESORA EA SERIES ― Every strategy has a personality.">
+<meta property="og:description" content="LAUREL the explosive. LIORA the steady light. PHILIA the butterfly. We show the drawdowns first.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ichika22.github.io/en/">
+<meta property="og:image" content="https://ichika22.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ESORA EA SERIES ― Every strategy has a personality.">
+<meta name="twitter:description" content="LAUREL the explosive. LIORA the steady light. PHILIA the butterfly. We show the drawdowns first.">
+<meta name="twitter:image" content="https://ichika22.github.io/og.png">
+<link rel="alternate" hreflang="ja" href="https://ichika22.github.io/">
+<link rel="alternate" hreflang="en" href="https://ichika22.github.io/en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,500&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#221d15; --cream:#f2ebda; --cream2:#ede4cd;
+  --laurel:#0f231a; --laurel2:#16311f; --gold:#c9a34c; --gold2:#e3c87e;
+  --light:#fdf8ec; --sun:#b98a2e;
+  --serif:"Source Serif 4",Georgia,serif;
+  --mincho:"Shippori Mincho","Yu Mincho",serif;
+  --goth:"Zen Kaku Gothic New","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--goth);color:var(--ink);background:var(--cream);line-height:1.8;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+section{position:relative;overflow:hidden;scroll-margin-top:58px}
+@media(max-width:760px){ section{scroll-margin-top:86px} }
+
+/* ---------- live gain ---------- */
+.livegain{height:66px;position:relative;margin:2px 0 4px}
+.livegain .clip{position:absolute;left:0;top:0;width:97px;height:33px;overflow:hidden;transform:scale(2);transform-origin:0 0;border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+.livegain img{position:absolute;left:-3px;top:-14px;width:553px;height:48px;max-width:none}
+.livedot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3ec46d;margin-right:6px;animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.15s}.rv.d2{transition-delay:.3s}.rv.d3{transition-delay:.45s}.rv.d4{transition-delay:.6s}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:26px;
+  padding:14px 26px;background:rgba(20,17,12,.72);backdrop-filter:blur(10px);color:#efe7d3}
+nav .logo{font-family:var(--serif);font-weight:600;letter-spacing:.35em;font-size:15px}
+nav .links{margin-left:auto;display:flex;gap:22px;font-size:13px;letter-spacing:.12em}
+nav .links a{text-decoration:none;opacity:.82;white-space:nowrap}
+nav .links a:hover{opacity:1;color:var(--gold2)}
+nav .cta{background:var(--gold);color:#1c1508;text-decoration:none;font-weight:700;font-size:13px;
+  padding:8px 18px;border-radius:2px;letter-spacing:.08em;white-space:nowrap}
+@media(max-width:760px){
+  nav{flex-wrap:wrap;gap:8px;padding:10px 14px 8px;row-gap:8px}
+  nav .logo{font-size:13px;letter-spacing:.28em}
+  nav .cta{margin-left:auto;font-size:11.5px;padding:7px 12px;letter-spacing:.04em}
+  nav .links{order:3;flex-basis:100%;min-width:0;max-width:100%;margin-left:0;gap:18px;font-size:12px;
+    overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+  nav .links::-webkit-scrollbar{display:none}
+  nav .links a.hidem{display:inline}
+}
+
+/* ---------- hero ---------- */
+#hero{min-height:100svh;display:flex;align-items:center;background:
+  radial-gradient(1200px 700px at 70% -10%,rgba(201,163,76,.16),transparent 60%),#14110c;color:#f2ebda}
+#hero .wrap{padding-top:120px;padding-bottom:90px}
+.kicker{font-family:var(--serif);letter-spacing:.42em;font-size:13px;color:var(--gold2);text-transform:uppercase}
+#hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,7.4vw,86px);line-height:1.2;margin:26px 0 22px}
+#hero p.lead{font-family:var(--serif);font-size:clamp(15px,2.4vw,19px);color:#d8cfb8;max-width:660px}
+.hero-triad{display:flex;gap:min(5vw,60px);margin-top:56px;flex-wrap:wrap}
+.triad{display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:#e8dfc8}
+.triad svg{width:84px;height:84px}
+.triad span{font-family:var(--serif);letter-spacing:.3em;font-size:12px}
+.triad em{font-style:normal;font-size:11px;color:#9d937c;letter-spacing:.1em}
+.scrolldn{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#8f8569;font-size:11px;letter-spacing:.3em;text-align:center}
+.scrolldn::after{content:"";display:block;width:1px;height:44px;background:linear-gradient(#8f8569,transparent);margin:10px auto 0;animation:drop 2s infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- essence ---------- */
+#essence{background:#1a1611;color:#e8dfc8;padding:110px 0 100px}
+#essence h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5vw,46px);margin:14px 0 18px}
+#essence .esub{opacity:.85;max-width:680px;margin-bottom:48px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.pillar{border:1px solid rgba(201,163,76,.35);border-radius:6px;padding:30px 26px;background:rgba(201,163,76,.05)}
+.pillar .pn{font-family:var(--serif);font-size:15px;letter-spacing:.3em;color:var(--gold);margin-bottom:14px}
+.pillar h3{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.45;margin-bottom:14px}
+.pillar h3 span{display:block;font-size:13px;font-weight:500;color:var(--gold2);letter-spacing:.12em;margin-top:8px}
+.pillar p{font-size:13.5px;opacity:.85}
+.pillar b{color:var(--gold2)}
+
+/* ---------- shared EA section ---------- */
+.ea{min-height:100svh;padding:110px 0 90px}
+.ea .label{font-family:var(--serif);letter-spacing:.42em;font-size:13px;text-transform:uppercase}
+.ea h2{font-family:var(--serif);font-weight:600;font-size:clamp(56px,10vw,120px);letter-spacing:.06em;line-height:1.05;margin:10px 0 4px}
+.ea .yomi{font-family:var(--serif);font-style:italic;font-size:17px;letter-spacing:.2em;margin-bottom:30px}
+.ea .type{display:inline-block;font-family:var(--serif);font-weight:600;font-size:clamp(18px,3vw,25px);
+  padding:6px 22px;border:1px solid currentColor;letter-spacing:.14em;margin-bottom:28px}
+.ea p.copy{font-family:var(--serif);font-size:clamp(15px,2.2vw,18px);max-width:680px;margin-bottom:44px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;margin-bottom:50px}
+.stat{padding:26px 20px}
+.stat .n{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.6vw,44px);letter-spacing:.02em;line-height:1.15}
+.stat .l{font-size:12px;letter-spacing:.22em;margin-bottom:8px;opacity:.75}
+.stat .s{font-size:12px;opacity:.65;margin-top:6px}
+.mfb-card{border-radius:6px;overflow:hidden;max-width:560px}
+.mfb-card .crop{overflow:hidden;aspect-ratio:1000/460;background:rgba(120,110,90,.12)}
+.mfb-card .crop img{width:100%;margin-top:-5.2%}
+.mfb-note{font-size:12px;opacity:.7;margin-top:10px}
+.btnrow{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.12em;
+  padding:15px 34px;border-radius:2px;transition:transform .25s ease,box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:#1c1508;box-shadow:0 6px 24px rgba(201,163,76,.35)}
+.btn.line{border:1px solid currentColor}
+
+/* ---------- LAUREL ---------- */
+#laurel{background:
+  radial-gradient(900px 600px at 85% 15%,rgba(201,163,76,.12),transparent 60%),
+  linear-gradient(175deg,#0c1d15,#122a1c 55%,#0c1d15);color:#ead9ae}
+#laurel .stats{background:rgba(201,163,76,.25)}
+#laurel .stat{background:#102418}
+#laurel .stat .n{color:#e3c87e}
+#laurel .wreath{position:absolute;top:90px;right:-40px;width:min(46vw,460px);opacity:.5;pointer-events:none}
+#laurel .type{color:#e3c87e}
+.badge{display:inline-block;background:#c9a34c;color:#1c1508;font-weight:700;font-size:12px;
+  letter-spacing:.18em;padding:5px 14px;border-radius:2px;margin-left:14px;vertical-align:middle}
+
+/* ---------- LIORA ---------- */
+#liora{background:
+  radial-gradient(1000px 680px at 50% 0%,#fff6d8 0%,rgba(255,246,216,0) 62%),
+  conic-gradient(from 180deg at 50% -12%,rgba(185,138,46,.10) 0 4deg,transparent 4deg 12deg,rgba(185,138,46,.10) 12deg 15deg,transparent 15deg 26deg,rgba(185,138,46,.08) 26deg 29deg,transparent 29deg 41deg,rgba(185,138,46,.10) 41deg 44deg,transparent 44deg 58deg,rgba(185,138,46,.08) 58deg 61deg,transparent 61deg 76deg,rgba(185,138,46,.10) 76deg 79deg,transparent 79deg 95deg,rgba(185,138,46,.08) 95deg 98deg,transparent 98deg 115deg,rgba(185,138,46,.10) 115deg 118deg,transparent 118deg 137deg,rgba(185,138,46,.08) 137deg 140deg,transparent 140deg 160deg,rgba(185,138,46,.10) 160deg 163deg,transparent 163deg 180deg),
+  var(--light);
+  color:#3c2f14}
+#liora .stats{background:rgba(185,138,46,.28)}
+#liora .stat{background:#fffdf4}
+#liora .stat .n{color:#8a651c}
+#liora .type{color:#8a651c}
+
+/* ---------- PHILIA ---------- */
+#philia{background:var(--cream);color:var(--ink)}
+#philia .stats{background:rgba(34,29,21,.16)}
+#philia .stat{background:#f7f1e2}
+#philia .type{color:#5a4a22}
+.bf{position:absolute;pointer-events:none;animation:flt 7s ease-in-out infinite;z-index:0}
+@media(max-width:1020px){.bf{display:none}}
+.bf svg{width:100%;height:100%}
+@keyframes flt{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-18px) rotate(5deg)}}
+.nisa-note{font-size:12px;opacity:.65;max-width:680px;margin-top:-30px;margin-bottom:44px}
+
+/* ---------- compare ---------- */
+#compare{background:#17140e;color:#efe7d3;padding:110px 0 100px}
+#compare h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5vw,44px);margin:12px 0 40px}
+.tbl{overflow-x:auto;border:1px solid rgba(201,163,76,.35);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}
+th,td{padding:15px 16px;text-align:center;border-bottom:1px solid rgba(239,231,211,.12)}
+thead th{font-family:var(--serif);font-size:16px;letter-spacing:.14em;padding-top:22px}
+thead .sub{display:block;font-family:var(--serif);font-style:italic;font-size:12px;letter-spacing:.06em;opacity:.8;margin-top:4px}
+tbody th{font-weight:500;font-size:12.5px;letter-spacing:.12em;color:#b7ac90;text-align:left;white-space:nowrap}
+td.lau{background:rgba(22,49,31,.55)} td.lio{background:rgba(255,246,216,.07)} td.phi{background:rgba(201,163,76,.10)}
+td b{font-family:var(--serif);font-size:17px}
+td .neg{color:#e08a6d} td .pos{color:#e3c87e}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px}
+.who a{display:block;text-decoration:none;border:1px solid rgba(201,163,76,.4);border-radius:6px;padding:24px 22px;transition:background .3s,transform .3s}
+.who a:hover{background:rgba(201,163,76,.12);transform:translateY(-3px)}
+.who .q{font-family:var(--serif);font-weight:600;font-size:16px;margin-bottom:8px}
+.who .a{font-size:13px;opacity:.8}
+.who .nm{font-family:var(--serif);letter-spacing:.25em;font-size:13px;color:var(--gold2);margin-top:14px}
+
+/* ---------- growth ---------- */
+#growth{background:#14110c;color:#efe7d3;padding:110px 0 100px}
+#growth h2{font-family:var(--serif);font-weight:600;font-size:clamp(26px,4.6vw,42px);margin:12px 0 18px}
+.gchart{background:rgba(239,231,211,.03);border:1px solid rgba(201,163,76,.3);border-radius:6px;padding:26px 18px 16px}
+.gchart svg{width:100%;height:auto;display:block}
+.glegend{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;font-size:12.5px;padding:14px 0 6px}
+.glegend i{display:inline-block;width:18px;height:4px;border-radius:2px;margin-right:7px;vertical-align:middle}
+
+/* ---------- flow / cta ---------- */
+#start{background:linear-gradient(180deg,#17140e,#221c11);color:#f2ebda;padding:110px 0 90px}
+#start h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5vw,44px);margin:12px 0 16px}
+.steps{counter-reset:st;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin:44px 0 10px}
+.step{border:1px solid rgba(201,163,76,.35);border-radius:6px;padding:26px 22px;position:relative}
+.step::before{counter-increment:st;content:"0" counter(st);font-family:var(--serif);font-size:34px;color:var(--gold);display:block;margin-bottom:10px}
+.step b{display:block;font-size:15px;margin-bottom:8px}
+.step p{font-size:13px;opacity:.8}
+.step code{background:rgba(201,163,76,.15);padding:2px 8px;border-radius:3px;font-size:12.5px;color:var(--gold2)}
+#start .btnrow{justify-content:center;margin-top:44px}
+#start .note{text-align:center;font-size:12px;opacity:.65;margin-top:18px}
+.already{border:1px solid rgba(201,163,76,.5);border-left:4px solid var(--gold);border-radius:4px;padding:20px 24px;margin-top:22px;background:rgba(201,163,76,.07)}
+.already b{color:var(--gold2)}
+.already p{font-size:13.5px;opacity:.9;margin-top:6px}
+.already code{background:rgba(201,163,76,.15);padding:2px 8px;border-radius:3px;color:var(--gold2)}
+#philia .already{background:rgba(201,163,76,.10)}
+#philia .already b{color:#7a5c14}
+
+/* ---------- footer ---------- */
+footer{background:#0f0d09;color:#93896f;font-size:12px;padding:56px 0 70px}
+footer h3{font-family:var(--serif);letter-spacing:.3em;font-size:13px;color:#c9bfa4;margin-bottom:16px}
+footer p{margin-bottom:10px}
+footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-size:14px;color:#c9a34c}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="logo">ESORA</span>
+  <div class="links">
+    <a href="#essence" class="hidem">Philosophy</a>
+    <a href="#laurel">LAUREL</a>
+    <a href="#liora">LIORA</a>
+    <a href="#philia">PHILIA</a>
+    <a href="#compare" class="hidem">Compare</a>
+    <a href="#start">Start</a>
+    <a href="../" title="日本語版">日本語</a>
+  </div>
+  <a class="cta" href="#start">Open an Account</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="hero">
+  <div class="wrap">
+    <div class="kicker rv">ESORA EA SERIES — MADE IN JAPAN</div>
+    <h1 class="rv d1">Every strategy<br>has a personality.</h1>
+    <p class="lead rv d2">LAUREL the explosive. LIORA the steady light. PHILIA the butterfly.<br>
+      Three EAs, three equity curves — everything public on Myfxbook, in real time. Including the ugly drawdowns.</p>
+    <div class="hero-triad rv d3">
+      <a class="triad" href="#laurel">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#c9a34c" stroke-width="2.4" stroke-linecap="round">
+          <path d="M50 88 C30 70 24 48 30 22"/><path d="M50 88 C70 70 76 48 70 22"/>
+          <path d="M31 34 q-12 -4 -14 -14 q12 0 14 14z" fill="#c9a34c" stroke="none"/>
+          <path d="M33 48 q-13 -2 -17 -12 q13 -1 17 12z" fill="#c9a34c" stroke="none"/>
+          <path d="M37 61 q-13 1 -19 -9 q13 -3 19 9z" fill="#c9a34c" stroke="none"/>
+          <path d="M44 73 q-12 4 -20 -5 q12 -5 20 5z" fill="#c9a34c" stroke="none"/>
+          <path d="M69 34 q12 -4 14 -14 q-12 0 -14 14z" fill="#c9a34c" stroke="none"/>
+          <path d="M67 48 q13 -2 17 -12 q-13 -1 -17 12z" fill="#c9a34c" stroke="none"/>
+          <path d="M63 61 q13 1 19 -9 q-13 -3 -19 9z" fill="#c9a34c" stroke="none"/>
+          <path d="M56 73 q12 4 20 -5 q-12 -5 -20 5z" fill="#c9a34c" stroke="none"/>
+        </svg>
+        <span>LAUREL</span><em>The Explosive</em>
+      </a>
+      <a class="triad" href="#liora">
+        <svg viewBox="0 0 100 100" stroke="#c9a34c" stroke-width="2.4" stroke-linecap="round" fill="none">
+          <circle cx="50" cy="50" r="15" fill="#c9a34c" stroke="none"/>
+          <path d="M50 8 v14 M50 78 v14 M8 50 h14 M78 50 h14 M21 21 l10 10 M69 69 l10 10 M79 21 l-10 10 M31 69 l-10 10"/>
+        </svg>
+        <span>LIORA</span><em>The Steady</em>
+      </a>
+      <a class="triad" href="#philia">
+        <svg viewBox="-100 -100 200 200">
+          <g id="hbf"><path d="M3,-15 C20,-54 60,-80 86,-72 C96,-66 92,-50 80,-34 C64,-14 34,-2 5,2 Z" fill="#c9a34c"/>
+          <path d="M4,4 C32,8 54,22 58,42 C60,56 50,66 38,62 C28,56 12,36 3,10 Z" fill="#c9a34c" opacity=".8"/></g>
+          <use href="#hbf" transform="scale(-1,1)"/>
+          <path d="M-1.6,-16 C-5,-8 -5,12 0,20 C5,12 5,-8 1.6,-16 Z" fill="#e3c87e"/>
+        </svg>
+        <span>PHILIA</span><em>The Butterfly</em>
+      </a>
+    </div>
+  </div>
+  <div class="scrolldn">SCROLL</div>
+</section>
+
+<!-- ================= ESSENCE ================= -->
+<section id="essence">
+  <div class="wrap">
+    <div class="kicker rv">THE ESSENCE</div>
+    <h2 class="rv d1">Why we expect an edge, long-term.</h2>
+    <p class="rv d1 esub">Not indicators. Not secret sauce. Just three principles that survive 20 years of data —
+      and they are built into every EA in this series.</p>
+    <div class="pillars rv d2">
+      <div class="pillar">
+        <div class="pn">01</div>
+        <h3>Win rate lies.<br><span>What matters is expectancy</span></h3>
+        <p>You can build a game with an 83% win rate that loses money every single day.
+        Whether a system makes money is decided by <b>expectancy</b> — what remains, on average, after
+        all the wins and all the losses. This series only trades setups whose expectancy was positive
+        across decades of historical data. One trade means nothing; the sum of hundreds does.</p>
+      </div>
+      <div class="pillar">
+        <div class="pn">02</div>
+        <h3>An edge is found by testing,<br>not by feeling.<span>20+ years of backtests</span></h3>
+        <p>Spreads, commissions, slippage — every FX trade starts underwater by the cost.
+        A setup that stays profitable after paying all of it can only be found by
+        <b>testing rules against decades of past data</b>. Every EA here runs exclusively on rules
+        that survived verification since 2003.</p>
+      </div>
+      <div class="pillar">
+        <div class="pn">03</div>
+        <h3>The hardest part is<br>sticking to the rules.<span>Machines don't panic</span></h3>
+        <p>Prospect theory says the human brain is wired to take profits too early and hold losses
+        too long. And in a deep drawdown, everyone wants to abandon the system — right at the bottom.
+        <b>A machine follows the rules 24 hours a day without feeling any of it.</b> That is the real
+        value of automated trading.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LAUREL ================= -->
+<section id="laurel" class="ea">
+  <svg class="wreath" viewBox="0 0 100 100" fill="none" stroke="#c9a34c" stroke-width="1.6" stroke-linecap="round">
+    <path d="M50 92 C26 72 18 46 26 16"/><path d="M50 92 C74 72 82 46 74 16"/>
+    <g fill="#c9a34c" stroke="none" opacity=".9">
+      <path d="M27 28 q-13 -4 -15 -16 q13 0 15 16z"/><path d="M28 42 q-14 -2 -18 -13 q14 -1 18 13z"/>
+      <path d="M32 56 q-14 1 -20 -10 q14 -3 20 10z"/><path d="M38 69 q-13 4 -21 -6 q13 -5 21 6z"/>
+      <path d="M46 80 q-11 6 -21 -2 q11 -7 21 2z"/>
+      <path d="M73 28 q13 -4 15 -16 q-13 0 -15 16z"/><path d="M72 42 q14 -2 18 -13 q-14 -1 -18 13z"/>
+      <path d="M68 56 q14 1 20 -10 q-14 -3 -20 10z"/><path d="M62 69 q13 4 21 -6 q-13 -5 -21 6z"/>
+      <path d="M54 80 q11 6 21 -2 q-11 -7 -21 2z"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="label rv" style="color:#c9a34c">01 — THE EXPLOSIVE</div>
+    <h2 class="rv">LAUREL</h2>
+    <div class="yomi rv">the laurel wreath</div><br>
+    <span class="type rv d1">The Explosive</span>
+    <p class="copy rv d2">When it wins, it wins big.<br>
+      The original of the series, named after the victor's crown. Its explosive power is unmatched in
+      our lineup — and across 20+ years of verification since 2003 it has kept compounding through deep
+      valleys and recoveries. But we state the cost plainly: realized drawdown is about 72%.
+      This is not a gentle EA. It sinks deep, and it leaps high. That is LAUREL.</p>
+    <div class="stats rv d2">
+      <div class="stat"><div class="l"><span class="livedot"></span>FORWARD — LIVE</div>
+        <div class="livegain"><div class="clip"><img class="js-live" src="https://widgets.myfxbook.com/widgets/12014181/mini.jpg" alt="LAUREL live gain (auto-updated by Myfxbook)"></div></div>
+        <div class="s">Auto-updated by Myfxbook. The ×20 run was 2024–2025 performance</div></div>
+      <div class="stat"><div class="l">REALIZED DRAWDOWN</div><div class="n">72.65%</div><div class="s">Measured by Myfxbook. We don't hide it</div></div>
+      <div class="stat"><div class="l">PROFIT FACTOR</div><div class="n">1.48</div><div class="s">Backtest since 2003 (20+ years)</div></div>
+      <div class="stat"><div class="l">BACKTEST</div><div class="n">20+ yrs</div><div class="s">Since 2003 · 16 winning years out of 20 (win years avg 3–4x)</div></div>
+      <div class="stat"><div class="l">PRICING</div><div class="n">3 mo free</div><div class="s">With account + deposit. After that: pay only from profits</div></div>
+    </div>
+    <p class="copy rv d2" style="font-size:14px;margin-top:-26px">
+      <b>How pricing works:</b> open an account through our link and deposit — the first 3 months are
+      completely free. After that you pay only when your account reaches a profit line set by your
+      deposit size, out of the profits. No upfront purchase fee, ever.</p>
+    <div class="rv d3">
+      <div class="label" style="color:#c9a34c;font-size:11px;margin-bottom:12px">LIVE — Myfxbook real-time results<span class="badge">3rd-party verified</span></div>
+      <a class="mfb-card" href="https://www.myfxbook.com/members/ichika_FX/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%AB/12014181" target="_blank" rel="noopener" style="display:block">
+        <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/12014181/large.jpg" alt="LAUREL Myfxbook live chart" loading="lazy"></div>
+      </a>
+      <div class="mfb-note">Click through for the full verified track record (independent measurement, updated daily)</div>
+      <div class="btnrow">
+        <a class="btn gold" href="#start">Start with LAUREL → How to begin</a>
+        <a class="btn line" href="https://www.myfxbook.com/members/ichika_FX/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%AB/12014181" target="_blank" rel="noopener">View live results</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIORA ================= -->
+<section id="liora" class="ea">
+  <div class="wrap">
+    <div class="label rv" style="color:#8a651c">02 — THE STEADY LIGHT</div>
+    <h2 class="rv">LIORA</h2>
+    <div class="yomi rv">"my light" in Hebrew</div><br>
+    <span class="type rv d1">The Steady</span>
+    <p class="copy rv d2">Straight as light.<br>
+      LIORA trades away LAUREL's explosiveness for consistency: it accepts drawdowns of around 40%
+      and grinds upward over the long run. Repeatability over fireworks. Its 2025 forward run doubled
+      the account (past performance) — the current curve is public on Myfxbook. Backtests span 20+
+      years since 2003 at a yearly average of ×5.6 (expect 2–3x in live conditions).</p>
+    <div class="stats rv d2">
+      <div class="stat"><div class="l"><span class="livedot"></span>FORWARD — LIVE</div>
+        <div class="livegain"><div class="clip"><img class="js-live" src="https://widgets.myfxbook.com/widgets/11663643/mini.jpg" alt="LIORA live gain (auto-updated by Myfxbook)"></div></div>
+        <div class="s">Started April 2025 · auto-updated by Myfxbook</div></div>
+      <div class="stat"><div class="l">EXPECTED DRAWDOWN</div><div class="n">~40%</div><div class="s">Realized 38.6% / 50–60% roughly twice in 20 years</div></div>
+      <div class="stat"><div class="l">PROFIT FACTOR</div><div class="n">1.76</div><div class="s">55.5% win rate · backtest since 2003 (20+ years)</div></div>
+      <div class="stat"><div class="l">MONTHLY FEE</div><div class="n">¥3,000</div><div class="s">≈ $20/mo flat, win or lose · cancel anytime</div></div>
+    </div>
+    <div class="rv d3">
+      <div class="label" style="color:#8a651c;font-size:11px;margin-bottom:12px">LIVE — Myfxbook real-time results<span class="badge">3rd-party verified</span></div>
+      <a class="mfb-card" href="https://www.myfxbook.com/members/ichika_FX/liora/11663643" target="_blank" rel="noopener" style="display:block;box-shadow:0 10px 40px rgba(138,101,28,.18)">
+        <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/11663643/large.jpg" alt="LIORA Myfxbook live chart" loading="lazy"></div>
+      </a>
+      <div class="mfb-note">Click through for the full verified track record (independent measurement, updated daily)</div>
+      <div class="btnrow">
+        <a class="btn gold" href="#start">Start with LIORA → How to begin</a>
+        <a class="btn line" href="https://www.myfxbook.com/members/ichika_FX/liora/11663643" target="_blank" rel="noopener" style="color:#8a651c">View live results</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PHILIA ================= -->
+<section id="philia" class="ea">
+  <div class="bf" style="top:12%;right:8%;width:74px" aria-hidden="true">
+    <svg viewBox="-100 -100 200 200"><g id="pb1"><path d="M3,-15 C20,-54 60,-80 86,-72 C96,-66 92,-50 80,-34 C64,-14 34,-2 5,2 Z" fill="#2c261d"/><path d="M18,-22 L28,-4 M33,-33 L45,-11 M48,-44 L60,-22" stroke="#63b3a8" stroke-width="9" stroke-linecap="round"/><path d="M4,4 C28,8 46,22 50,40 C52,54 44,64 34,60 C26,54 14,36 3,10 Z" fill="#2c261d"/></g><use href="#pb1" transform="scale(-1,1)"/><path d="M-1.6,-14 C-4,-6 -4,10 0,17 C4,10 4,-6 1.6,-14 Z" fill="#241f17"/></svg>
+  </div>
+  <div class="bf" style="top:56%;right:3%;width:46px;animation-delay:-3s" aria-hidden="true">
+    <svg viewBox="-100 -100 200 200"><g id="pb2"><path d="M2,-13 C18,-46 50,-66 72,-58 C80,-52 76,-38 64,-24 C50,-8 26,0 4,2 Z" fill="#c2703a"/><path d="M3,4 C24,8 40,20 44,36 C46,48 38,56 28,52 C20,46 10,30 2,9 Z" fill="#d99a4e"/></g><use href="#pb2" transform="scale(-1,1)"/><path d="M-1.4,-12 C-3.6,-5 -3.6,9 0,15 C3.6,9 3.6,-5 1.4,-12 Z" fill="#33261a"/></svg>
+  </div>
+  <div class="bf" style="bottom:6%;right:10%;width:56px;animation-delay:-5s" aria-hidden="true">
+    <svg viewBox="-100 -100 200 200"><g id="pb3"><path d="M3,-16 C22,-58 62,-78 88,-70 C96,-66 94,-52 84,-38 C70,-18 40,-2 6,2 Z" fill="#e3d5a8"/><path d="M20,-30 L30,-6 M34,-40 L46,-14 M50,-50 L62,-24" stroke="#2b2318" stroke-width="3"/><path d="M5,4 C34,6 56,20 62,40 C66,56 58,66 48,64 C40,70 34,80 32,88 C28,76 28,68 26,62 C16,54 8,36 4,10 Z" fill="#e3d5a8" stroke="#2b2318" stroke-width="2"/><circle cx="50" cy="52" r="5" fill="#c2452f"/></g><use href="#pb3" transform="scale(-1,1)"/><path d="M-1.6,-16 C-5,-8 -5,12 0,20 C5,12 5,-8 1.6,-16 Z" fill="#2a2116"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="label rv" style="color:#5a4a22">03 — THE NEW ONE</div>
+    <h2 class="rv">PHILIA</h2>
+    <div class="yomi rv">the butterfly</div><br>
+    <span class="type rv d1">The Butterfly</span>
+    <p class="copy rv d2">It keeps beating its wings, quietly.<br>
+      Our newest EA was designed around one question: not "how much can it make" but
+      "how little will it hurt". Across 20+ years of verification since 2003, its average yearly
+      drawdown is <b>27.3%</b> — the shallowest in the series. Built for people who don't want to
+      live on the edge of their seat. Compound quietly, like a savings habit. No VPS needed —
+      runs from your phone.</p>
+    <p class="nisa-note rv d2">*This is leveraged FX trading — a completely different risk profile from any savings or index plan. Losses can be substantial. No principal protection.</p>
+    <div class="stats rv d2">
+      <div class="stat"><div class="l">AVG YEARLY DD</div><div class="n">27.3%</div><div class="s">Average of 23 independent yearly backtests since 2003</div></div>
+      <div class="stat"><div class="l">YEARLY RECORD</div><div class="n">20W–3L</div><div class="s">Since 2003 · worst year −14.8%</div></div>
+      <div class="stat"><div class="l">PROFIT FACTOR</div><div class="n">2.02</div><div class="s">61.3% win rate · continuous backtest since 2003</div></div>
+      <div class="stat"><div class="l">TOTAL RETURN</div><div class="n">×28,478</div><div class="s">20+ year continuous backtest (from $30,000)</div></div>
+      <div class="stat"><div class="l">PRICING (EARLY)</div><div class="n">¥500/mo</div><div class="s">≈ $4/mo early access — rises to ¥3,000 after the first year</div></div>
+    </div>
+    <div class="rv d3">
+      <div class="label" style="color:#5a4a22;font-size:11px;margin-bottom:12px">LIVE — Myfxbook real-time results</div>
+      <div id="philia-mfb">
+        <div style="border:1px dashed rgba(34,29,21,.4);border-radius:6px;max-width:560px;padding:38px 30px;text-align:center">
+          <div style="font-family:var(--serif);letter-spacing:.3em;font-size:14px;margin-bottom:10px">FORWARD — TRACKING</div>
+          <p style="font-size:13px;opacity:.75">Live measurement has just started on Myfxbook.</p>
+        </div>
+      </div>
+      <div class="already" style="margin-top:26px;max-width:660px">
+        <b>Already running LAUREL or LIORA?</b>
+        <p>Open an additional account, fund it, and DM us your account number on X or Discord. That's all it takes to start PHILIA.</p>
+      </div>
+      <div class="btnrow">
+        <a class="btn gold" href="#start">Start with PHILIA → How to begin</a>
+        <a class="btn line" href="https://www.myfxbook.com/members/ichika_FX/philia/12099219" target="_blank" rel="noopener">View live results</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section id="compare">
+  <div class="wrap">
+    <div class="kicker rv">COMPARISON</div>
+    <h2 class="rv d1">Three personalities, side by side.</h2>
+    <div class="tbl rv d2">
+    <table>
+      <thead><tr><th></th>
+        <th>LAUREL<span class="sub">The Explosive</span></th>
+        <th>LIORA<span class="sub">The Steady</span></th>
+        <th>PHILIA<span class="sub">The Butterfly</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><th>Motif</th><td class="lau">Laurel wreath</td><td class="lio">Light</td><td class="phi">Butterfly</td></tr>
+        <tr><th>Return profile</th><td class="lau"><b class="pos">Explosive + long-term growth</b><br>Win years avg 3–4x</td><td class="lio"><b>Steady long-term</b><br>Expect 2–3x/yr live</td><td class="phi"><b>Quiet compounding</b><br>×28,478 (backtest)</td></tr>
+        <tr><th>Drawdown</th><td class="lau"><b class="neg">72.65% realized</b><br>Expect the extreme</td><td class="lio"><b class="neg">~40% average</b><br>Occasionally 50–60%</td><td class="phi"><b class="neg">27.3% yearly avg</b><br>Worst year 50.3% (2007)</td></tr>
+        <tr><th>Forward record</th><td class="lau">×20 (2024–25)<br>Current: live on Myfxbook</td><td class="lio">+175% (Apr 2025–)<br>Live on Myfxbook</td><td class="phi">Tracking started<br>Live on Myfxbook</td></tr>
+        <tr><th>Backtest period</th><td class="lau">Since 2003<br>20+ years</td><td class="lio">Since 2003<br>20+ years</td><td class="phi">Since 2003<br>20+ years</td></tr>
+        <tr><th>Profit factor</th><td class="lau"><b>1.48</b></td><td class="lio"><b>1.76</b></td><td class="phi"><b>2.02</b></td></tr>
+        <tr><th>Pricing</th><td class="lau">3 months free<br><span style="opacity:.75">then pay only from profits</span></td><td class="lio">¥3,000/mo (≈$20)</td><td class="phi"><b>Early: ¥500/mo (≈$4)</b><br><span style="opacity:.75">¥3,000 after year one</span></td></tr>
+        <tr><th>Suggested capital</th><td class="lau">¥300k+ (≈$2,000)</td><td class="lio">¥200k+ (≈$1,300)</td><td class="phi">¥200k+ (≈$1,300)</td></tr>
+        <tr><th>Setup</th><td class="lau">VPS recommended<br><span style="opacity:.75">a few $/mo</span></td><td class="lio">No VPS<br><span style="opacity:.75">phone only</span></td><td class="phi">No VPS<br><span style="opacity:.75">phone only</span></td></tr>
+        <tr><th>Best for</th><td class="lau">Maximum firepower,<br>can stomach deep DD</td><td class="lio">Balance seekers,<br>in it for the long run</td><td class="phi">Shallow-DD compounding,<br>savings-style temperament</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="who rv d3">
+      <a href="#laurel"><div class="q">"I want the explosive one."</div><div class="a">Halving your equity is part of the deal. If you still want maximum firepower —</div><div class="nm">→ LAUREL</div></a>
+      <a href="#liora"><div class="q">"I want realistic, long-term growth."</div><div class="a">Accept ~40% DD, aim for 2–3x a year. The balanced classic.</div><div class="nm">→ LIORA</div></a>
+      <a href="#philia"><div class="q">"I want to compound without the stress."</div><div class="a">Shallowest drawdowns in the lineup (27.3% yearly avg). For the quiet ones.</div><div class="nm">→ PHILIA</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GROWTH IMAGE ================= -->
+<section id="growth">
+  <div class="wrap">
+    <div class="kicker rv">SIMULATION</div>
+    <h2 class="rv d1">If it compounded at a fixed rate — a $10,000 paper simulation.</h2>
+    <p class="rv d1" style="opacity:.85;max-width:700px;margin-bottom:36px">
+      A pure paper calculation assuming the stated rate every year (pre-tax, no withdrawals).
+      <b>This is not a forecast or a promise of future performance.</b> Real results never grow in a
+      straight line — every EA goes through its full drawdowns, and losing years happen.</p>
+    <div class="gchart rv d2">
+      <svg viewBox="0 0 700 330" role="img" aria-label="10-year compounding simulation from $10,000 (log scale)">
+        <g stroke="rgba(239,231,211,.14)" stroke-width="1">
+          <line x1="40" y1="280" x2="600" y2="280"/><line x1="40" y1="217.5" x2="600" y2="217.5"/>
+          <line x1="40" y1="155" x2="600" y2="155"/><line x1="40" y1="92.5" x2="600" y2="92.5"/>
+          <line x1="40" y1="30" x2="600" y2="30"/>
+        </g>
+        <g fill="#93896f" font-size="11" font-family="sans-serif">
+          <text x="36" y="284" text-anchor="end">$10K</text><text x="36" y="221" text-anchor="end">$100K</text>
+          <text x="36" y="159" text-anchor="end">$1M</text><text x="36" y="96" text-anchor="end">$10M</text>
+          <text x="36" y="34" text-anchor="end">$100M</text>
+          <text x="40" y="302">Yr 0</text><text x="320" y="302" text-anchor="middle">Yr 5</text><text x="600" y="302" text-anchor="end">Yr 10</text>
+        </g>
+        <polyline fill="none" stroke="#e3c87e" stroke-width="3" stroke-linejoin="round"
+          points="40,280 96,255.1 152,230.3 208,205.4 264,180.5 320,155.6 376,130.8 432,105.9 488,81.0 544,56.1 600,31.3"/>
+        <polyline fill="none" stroke="#f0e7d0" stroke-width="2.4" stroke-linejoin="round" opacity=".95"
+          points="40,280 96,261.2 152,242.4 208,223.6 264,204.8 320,185.9 376,167.1 432,148.3 488,129.5 544,110.7 600,91.9"/>
+        <polyline fill="none" stroke="#63b3a8" stroke-width="2.4" stroke-linejoin="round"
+          points="40,280 96,267.9 152,255.9 208,243.8 264,231.8 320,219.6 376,207.6 432,195.5 488,183.4 544,171.4 600,159.3"/>
+        <g font-size="12" font-weight="bold" font-family="sans-serif">
+          <text x="606" y="35" fill="#e3c87e">$95.4M</text>
+          <text x="606" y="96" fill="#f0e7d0">$10.2M</text>
+          <text x="606" y="163" fill="#63b3a8">$854K</text>
+        </g>
+      </svg>
+      <div class="glegend">
+        <span><i style="background:#e3c87e"></i>LAUREL (assumed +150%/yr)</span>
+        <span><i style="background:#f0e7d0"></i>LIORA (assumed +100%/yr)</span>
+        <span><i style="background:#63b3a8"></i>PHILIA (assumed +56%/yr)</span>
+      </div>
+    </div>
+    <div class="tbl rv d3" style="margin-top:34px">
+    <table>
+      <thead><tr><th>After</th>
+        <th>LAUREL<span class="sub">+150%/yr assumed</span></th>
+        <th>LIORA<span class="sub">+100%/yr assumed</span></th>
+        <th>PHILIA<span class="sub">+56%/yr assumed</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><th>Year 1</th><td class="lau">$25,000</td><td class="lio">$20,000</td><td class="phi">$15,600</td></tr>
+        <tr><th>Year 2</th><td class="lau">$62,500</td><td class="lio">$40,000</td><td class="phi">$24,300</td></tr>
+        <tr><th>Year 3</th><td class="lau">$156K</td><td class="lio">$80,000</td><td class="phi">$38,000</td></tr>
+        <tr><th>Year 4</th><td class="lau">$391K</td><td class="lio">$160K</td><td class="phi">$59,200</td></tr>
+        <tr><th>Year 5</th><td class="lau">$977K</td><td class="lio">$320K</td><td class="phi">$92,400</td></tr>
+        <tr><th>Year 6</th><td class="lau">$2.44M</td><td class="lio">$640K</td><td class="phi">$144K</td></tr>
+        <tr><th>Year 7</th><td class="lau">$6.10M</td><td class="lio">$1.28M</td><td class="phi">$225K</td></tr>
+        <tr><th>Year 8</th><td class="lau">$15.2M</td><td class="lio">$2.56M</td><td class="phi">$351K</td></tr>
+        <tr><th>Year 9</th><td class="lau">$38.1M</td><td class="lio">$5.12M</td><td class="phi">$547K</td></tr>
+        <tr><th>Year 10</th><td class="lau"><b class="pos">$95.4M</b></td><td class="lio"><b>$10.2M</b></td><td class="phi"><b>$854K</b></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="rv d3" style="font-size:12px;opacity:.65;margin-top:18px">
+      *Assumptions: LAUREL = win years of 3–4x averaged with losing years / LIORA = midpoint of the 2–3x live expectation / PHILIA = backtest average yearly return (~56%).
+      All figures are hypothetical compounding at a constant rate. They do not predict, imply or guarantee future results. Real trading passes through each EA's full drawdowns
+      (LAUREL ~72% realized, LIORA ~40% expected, PHILIA 27.3% yearly average) and you can lose a substantial portion of your funds.</p>
+  </div>
+</section>
+
+<!-- ================= START / CTA ================= -->
+<section id="start">
+  <div class="wrap">
+    <div class="kicker rv">GET STARTED</div>
+    <h2 class="rv d1">Four steps to start.</h2>
+    <p class="rv d1" style="opacity:.8;max-width:640px">All EAs require opening a Tradeview account through our link. The account itself is free to open and maintain.</p>
+    <div class="steps rv d2">
+      <div class="step"><b>Open a Tradeview account</b><p>Use the official link below (IB: <code>5233450</code>). Choose <code>MT4 / Innovative Liquidity Connector</code>, leverage 200. Individual and corporate accounts both work.</p></div>
+      <div class="step"><b>Fund the account</b><p>Suggested: $2,000+ for LAUREL, $1,300+ for LIORA / PHILIA. Always use a separate account per EA.</p></div>
+      <div class="step"><b>DM us your account number</b><p>Message us on X or Discord with the EA name + your account number. We'll walk you through setup in English.</p></div>
+      <div class="step"><b>Go live</b><p>LIORA and PHILIA need no VPS — your phone is enough. LAUREL runs best on a small VPS (a few dollars a month). Then just watch the results on Myfxbook.</p></div>
+    </div>
+    <div class="already rv d2">
+      <b>Already have a Tradeview account?</b>
+      <p>Open an <b>additional account</b> instead, and write <code>5233450</code> in the "Additional
+      comments" field of the application so it links to our IB (required to participate). Then fund it
+      and DM us the account number on X or Discord.</p>
+    </div>
+    <div class="btnrow">
+      <a class="btn gold js-cta-tv" href="#" target="_blank" rel="noopener">Open an individual account (free)</a>
+      <a class="btn gold js-cta-tv-corp" href="#" target="_blank" rel="noopener">Open a corporate account</a>
+      <a class="btn line js-cta-x" href="#" target="_blank" rel="noopener">DM us on X</a>
+    </div>
+    <p class="note">*Not sure which EA fits you? DM us — we'll share general information about each EA's character and risks (not individual investment advice; the final decision is always yours).</p>
+    <p class="note">*Choosing a broker and opening an account is entirely your own decision. We do not broker or intermediate account openings.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3>DISCLAIMER — RISK DISCLOSURE</h3>
+    <p>・<b>Not available to U.S. persons.</b> The services and links on this site are not directed at residents of the United States or any jurisdiction where their use would be contrary to local law.</p>
+    <p>・<b>Risk:</b> Leveraged foreign exchange trading carries a high level of risk. Losses can exceed your deposited margin. Neither principal nor profit is guaranteed in any way. Never trade with money you cannot afford to lose.</p>
+    <p>・<b>Past performance:</b> All backtest and forward results shown on this site are historical. They do not indicate or guarantee future performance. Sources: MT4 real-tick backtests (modeling quality 99%+) and independent measurement by Myfxbook. "27.3% average yearly drawdown" is the simple average of the maximum drawdowns of 23 independent yearly backtests, 2003–2025.</p>
+    <p>・<b>Simulations:</b> The "paper simulation" figures assume a constant annual rate and are illustrative calculations only — not predictions. Real trading involves drawdowns in which a substantial portion of funds can be lost.</p>
+    <p>・<b>No investment advice:</b> The operator of this site is not registered as an investment adviser or asset manager in any jurisdiction and provides no individual investment advice or discretionary management. The EAs are provided as software. All decisions — use, settings, account opening, deposit size — are yours alone. Information shared via SNS/DM is general information only.</p>
+    <p>・<b>Conflict of interest:</b> This site acts as an Introducing Broker (IB) for Tradeview and may receive compensation from Tradeview based on accounts opened and traded through our links.</p>
+    <p>・<b>About the broker:</b> Tradeview operates under overseas licenses. Investor-protection arrangements differ from those of brokers registered in your home jurisdiction. We do not broker or intermediate account openings; links are provided for information. Review the broker's terms and risks and decide entirely at your own discretion and responsibility.</p>
+    <p>・<b>Fees:</b> Terms and pricing of each EA may change. Always confirm the latest conditions before subscribing to a paid plan.</p>
+    <p>・Drawdowns always come. Fund your account so that you can survive them — that comes before everything else.</p>
+    <div class="fx">ESORA EA SERIES</div>
+  </div>
+</footer>
+
+<script>
+'use strict';
+/* ====== CONFIG ====== */
+const CONFIG = {
+  tradeviewUrl: 'https://www.tradeviewlatam.com/ja/forms/accounts/individual?ib=5233450',
+  tradeviewCorpUrl: 'https://www.tradeviewlatam.com/ja/forms/accounts/corporate?ib=5233450',
+  xUrl: 'https://x.com/ichikaFX',
+  philiaMyfxbookUrl: 'https://www.myfxbook.com/members/ichika_FX/philia/12099219',
+  philiaWidgetId: '12099219'
+};
+
+if (CONFIG.tradeviewUrl) document.querySelectorAll('.js-cta-tv').forEach(a => { a.href = CONFIG.tradeviewUrl; a.target = '_blank'; });
+if (CONFIG.tradeviewCorpUrl) document.querySelectorAll('.js-cta-tv-corp').forEach(a => { a.href = CONFIG.tradeviewCorpUrl; a.target = '_blank'; });
+if (CONFIG.xUrl) document.querySelectorAll('.js-cta-x').forEach(a => a.href = CONFIG.xUrl);
+
+/* PHILIA live chart */
+if (CONFIG.philiaWidgetId) {
+  document.getElementById('philia-mfb').innerHTML =
+    `<a class="mfb-card" href="${CONFIG.philiaMyfxbookUrl || '#'}" target="_blank" rel="noopener" style="display:block">
+       <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/${CONFIG.philiaWidgetId}/large.jpg" alt="PHILIA Myfxbook live chart" loading="lazy"></div>
+     </a>
+     <div class="mfb-note">Click through for the full verified track record (independent measurement, updated daily)</div>`;
+}
+
+/* manual smooth scroll (robust in embedded viewers) */
+function smoothGo(el) {
+  const t0 = performance.now(), y0 = window.scrollY, dur = 650;
+  const off = (document.querySelector('nav')?.offsetHeight || 52) + 6;
+  (function step(now) {
+    const u = Math.min(1, (now - t0) / dur);
+    const ease = u * u * (3 - 2 * u);
+    const target = el.getBoundingClientRect().top + window.scrollY - off;
+    window.scrollTo({ top: y0 + (target - y0) * ease, behavior: 'instant' });
+    if (u < 1) requestAnimationFrame(step);
+  })(performance.now());
+}
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    smoothGo(el);
+    try { history.replaceState(null, '', '#' + id); } catch (_) {}
+  });
+});
+
+/* force-refresh live Myfxbook widget images past browser cache */
+document.querySelectorAll('img.js-live').forEach(img => {
+  const url = img.src;
+  fetch(url, { mode: 'no-cors', cache: 'reload' })
+    .then(() => { img.src = ''; img.src = url; })
+    .catch(() => {});
+});
+
+/* reveal on scroll */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: 0.12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* verification helpers */
+const _only = new URLSearchParams(location.search).get('only');
+if (_only && document.getElementById(_only)) {
+  document.querySelectorAll('section, footer').forEach(el => { if (el.id !== _only) el.style.display = 'none'; });
+}
+if (new URLSearchParams(location.search).get('flat') === '1') {
+  const st = document.createElement('style');
+  st.textContent = '#hero,.ea{min-height:auto!important} .rv{opacity:1!important;transform:none!important;transition:none!important}';
+  document.head.appendChild(st);
+}
+</script>
+</body>
+</html>
