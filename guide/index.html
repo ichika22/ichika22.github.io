@@ -135,6 +135,8 @@ footer a{color:inherit}
     <tr><th>郵便番号(半角数字)</th><td>ハイフンなしで入力(例: <b>1600023</b>)</td></tr>
     <tr><th>税務上の米国市民/居住者?</th><td><b>いいえ</b>(該当する方を除く)</td></tr>
   </table>
+  <div class="warn">⚠️ <b>住所欄の薄い文字が「銀行の住所を入力してください」と表示されますが、入力するのは銀行の住所ではなく、ご自身の現住所です。</b>フォーム側の表記が紛らわしいだけなので、惑わされずにローマ字でご自身の住所を入力してください。</div>
+  <div class="shot" style="max-width:640px"><img src="img/step6_address_note.png" alt="住所欄の紛らわしいプレースホルダー表示" loading="lazy"></div>
 
   <div class="stephead"><span class="n">07</span><h2>口座タイプ(取引市場)の選択</h2></div>
   <div class="shot"><img src="img/step7_market.png" alt="取引市場の選択画面" loading="lazy"></div>
@@ -142,10 +144,12 @@ footer a{color:inherit}
   <table>
     <tr><th>プラットフォーム</th><td><b>MT4</b>(MetaTrader 4)※MT5ではありません</td></tr>
     <tr><th>口座タイプ</th><td><b>Innovative Liquidity Connector(ILC)</b></td></tr>
-    <tr><th>レバレッジ</th><td>開設時に選択画面はありません(初期設定は100倍)。<b>開設後にSTEP09の手順で200倍へ変更</b>します</td></tr>
+    <tr><th>レバレッジ</th><td>フォームに「レバレッジ」欄がある場合は <b>1:200</b> を選択。欄が出なかった場合や、開設後に100倍になっていた場合は<b>STEP09の手順で200倍へ変更</b>できます</td></tr>
     <tr><th>口座通貨</th><td><b>USD(米ドル)を推奨</b>。今後の円安進行を見込む場合、USD建てのほうが有利なためです(※為替の見通しは保証ではありません。お好みでJPYも選べます)</td></tr>
-    <tr><th>備考・その他連絡事項</th><td><b>5233450</b> と入力(IB紐づけ用。入力がないとEA・キャンペーンの対象外になります)</td></tr>
+    <tr><th>その他の連絡事項</th><td><b>「5233450とIB紐づけしてください」</b>と入力(数字だけでもOK。入力がないとEA・キャンペーンの対象外になります)</td></tr>
   </table>
+  <p style="font-size:14px">実際の入力例がこちらです(そっくりそのまま真似すればOKです)。</p>
+  <div class="shot" style="max-width:640px"><img src="img/stepB3_form.png" alt="口座開設フォームの入力例(MT4・iLC・1:200・備考欄)" loading="lazy"></div>
 
   <div class="stephead"><span class="n">08</span><h2>本人確認(かんたんな方でOK)</h2></div>
   <div class="shot"><img src="img/step8_kyc.png" alt="本人確認方法の選択画面" loading="lazy"></div>
@@ -165,14 +169,24 @@ footer a{color:inherit}
 <!-- ============ B. 追加口座 ============ -->
 <section class="wrap" id="add">
   <div class="stephead"><span class="n">B</span><h2>すでに口座がある方(追加口座)</h2></div>
-  <p style="font-size:14px">新規登録は不要です。<b>会員ページにログイン→追加口座の申請</b>だけで完了します(書類の再提出も原則不要)。</p>
+  <p style="font-size:14px">新規登録は不要です。<b>会員ページにログイン→「口座を開設する」ボタン</b>から3ステップで完了します(書類の再提出も原則不要)。</p>
+
+  <p style="font-size:14px;margin-top:14px"><b>① 口座一覧の下にある「口座を開設する」をクリック</b></p>
+  <div class="shot"><img src="img/stepB1_accounts.png" alt="会員ページの口座一覧と口座を開設するボタン" loading="lazy"></div>
+
+  <p style="font-size:14px;margin-top:14px"><b>② 取引市場は「外国為替」を選択</b></p>
+  <div class="shot" style="max-width:640px"><img src="img/stepB2_market.png" alt="取引市場の選択(外国為替)" loading="lazy"></div>
+
+  <p style="font-size:14px;margin-top:14px"><b>③ フォームを画像のとおりに入力して「次へ」</b></p>
+  <div class="shot" style="max-width:640px"><img src="img/stepB3_form.png" alt="追加口座の入力例" loading="lazy"></div>
   <table>
-    <tr><th>申請場所</th><td>会員ページ内の「追加口座」メニューから</td></tr>
-    <tr><th>選ぶもの</th><td>新規と同じ: <b>MT4/ILC/レバレッジ200倍/JPY</b></td></tr>
-    <tr><th>その他の連絡事項(備考欄)</th><td><b>5233450</b> と必ず入力(これがIB紐づけの条件です。入力がないとキャンペーン対象外)</td></tr>
+    <tr><th>プラットフォーム</th><td><b>MT4</b></td></tr>
+    <tr><th>口座通貨</th><td><b>USD推奨</b>(お好みでJPYも可)</td></tr>
+    <tr><th>口座タイプ</th><td><b>iLC</b></td></tr>
+    <tr><th>レバレッジ</th><td><b>1:200</b></td></tr>
+    <tr><th>その他の連絡事項</th><td><b>「5233450とIB紐づけしてください」</b>と必ず入力(これがIB紐づけの条件です。入力がないとキャンペーン対象外)</td></tr>
   </table>
   <div class="warn">⚠️ EAごとに口座は必ず分けてください(1口座1EA)。すでにローレルを稼働中の口座にリオラ・フィリアを追加することはできません。</div>
-  <div class="pending">📷 この画面のスクリーンショットは準備中です</div>
 </section>
 
 <!-- ============ C. 開設後 ============ -->
