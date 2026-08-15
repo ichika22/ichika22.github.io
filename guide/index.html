@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tradeview口座開設ガイド ― 画像つき手順(ESORA)</title>
+<meta name="description" content="Tradeviewの口座開設を、画像と入力例つきで解説。新規口座・追加口座の両方に対応。IB: 5233450">
+<meta property="og:title" content="Tradeview口座開設ガイド(画像つき)">
+<meta property="og:description" content="どこに何を入力すればいいか、手順どおりに進めるだけのガイドです。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ichika22.github.io/guide/">
+<meta property="og:image" content="https://ichika22.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#221d15;--gold:#c9a34c;--gold2:#e3c87e;--cream:#f2ebda;
+  --serif:"Source Serif 4",Georgia,serif;--mincho:"Shippori Mincho",serif;--goth:"Zen Kaku Gothic New",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--goth);background:
+  radial-gradient(900px 560px at 50% -10%,rgba(201,163,76,.16),transparent 60%),#14110c;
+  color:var(--cream);line-height:1.9}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:20px;
+  padding:12px 22px;background:rgba(20,17,12,.75);backdrop-filter:blur(10px)}
+nav .logo{font-family:var(--serif);font-weight:600;letter-spacing:.35em;font-size:14px;color:#efe7d3;text-decoration:none}
+nav a.back{margin-left:auto;font-size:12.5px;color:#efe7d3;opacity:.85;text-decoration:none}
+header{padding:110px 0 30px;text-align:center}
+.kicker{font-family:var(--serif);letter-spacing:.4em;font-size:12px;color:var(--gold2);text-transform:uppercase}
+h1{font-family:var(--mincho);font-weight:700;font-size:clamp(26px,6vw,38px);margin:14px 0 8px}
+.sub{font-size:14px;opacity:.85}
+.toc{border:1px solid rgba(201,163,76,.4);border-radius:8px;padding:18px 22px;margin:26px 0;background:rgba(201,163,76,.05);font-size:14px}
+.toc a{color:var(--gold2);text-decoration:none}
+.toc li{margin:4px 0}
+section{padding:26px 0;scroll-margin-top:70px}
+.stephead{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+.stephead .n{font-family:var(--serif);font-size:30px;color:var(--gold)}
+.stephead h2{font-family:var(--mincho);font-weight:700;font-size:clamp(19px,4.4vw,24px)}
+.shot{border:1px solid rgba(201,163,76,.45);border-radius:8px;overflow:hidden;margin:14px 0}
+.shot img{width:100%;display:block}
+.pending{border:1px dashed rgba(242,235,218,.4);border-radius:8px;padding:26px;text-align:center;font-size:13px;opacity:.65;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0}
+th,td{border:1px solid rgba(201,163,76,.35);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:rgba(201,163,76,.12);font-weight:700;white-space:nowrap;width:38%}
+td b{color:var(--gold2)}
+.tip{border-left:4px solid var(--gold);background:rgba(201,163,76,.08);border-radius:4px;padding:12px 16px;font-size:13.5px;margin:12px 0}
+.warn{border-left:4px solid #c96a4c;background:rgba(201,106,76,.10);border-radius:4px;padding:12px 16px;font-size:13.5px;margin:12px 0}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:700;font-size:15px;
+  padding:16px 20px;border-radius:8px;margin-top:12px;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:#1c1508;box-shadow:0 6px 24px rgba(201,163,76,.35)}
+.btn.line{border:1px solid var(--gold);color:var(--gold2)}
+footer{padding:40px 0 60px;text-align:center}
+footer .fx{font-family:var(--serif);letter-spacing:.35em;font-size:13px;color:var(--gold)}
+footer p{font-size:11px;opacity:.55;margin-top:12px}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="../">ESORA</a><a class="back" href="../">← サイトへ戻る</a></nav>
+
+<header class="wrap">
+  <div class="kicker">ACCOUNT GUIDE</div>
+  <h1>Tradeview口座開設ガイド</h1>
+  <p class="sub">画像と入力例つき。上から順番に進めるだけでOKです🦋<br>所要時間: 約10分(+書類の承認待ち)</p>
+</header>
+
+<div class="wrap">
+  <div class="toc">
+    <b>もくじ</b>
+    <ul style="list-style:none;margin-top:6px">
+      <li>▸ <a href="#new">A. はじめてTradeviewを使う方(新規口座)</a></li>
+      <li>▸ <a href="#add">B. すでに口座がある方(追加口座)</a></li>
+      <li>▸ <a href="#after">C. 開設できたら(入金〜稼働開始)</a></li>
+      <li>▸ <a href="#faq">よくあるつまずき</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ A. 新規 ============ -->
+<section class="wrap" id="new">
+  <div class="stephead"><span class="n">A</span><h2>はじめての方(新規口座)</h2></div>
+
+  <div class="stephead"><span class="n">01</span><h2>会員ページ登録</h2></div>
+  <p style="font-size:14px">まず、下の専用リンクから登録ページを開きます(このリンク経由でないとキャンペーン・EA利用の対象になりません)。</p>
+  <a class="btn gold" href="https://www.tradeviewlatam.com/ja/forms/accounts/individual?ib=5233450" target="_blank" rel="noopener">口座開設ページを開く(IB: 5233450)</a>
+  <div class="shot"><img src="img/step1_register.png" alt="会員ページ登録画面" loading="lazy"></div>
+  <table>
+    <tr><th>メールアドレス</th><td>普段使うメールを入力(あとで認証メールが届きます)</td></tr>
+    <tr><th>パスワード</th><td>8文字以上で、<b>英大文字・小文字・数字・記号</b>を組み合わせて作成(例: <b>Esora2026!</b> のような形式)</td></tr>
+    <tr><th>パスワードの確認</th><td>同じものをもう一度</td></tr>
+  </table>
+  <p style="font-size:14px">入力したら「<b>次へ</b>」→ 届いた<b>認証メールのリンク</b>をタップして、会員ページにログインします。</p>
+  <div class="tip">💡 Cookieの確認画面が出たら「すべてを受け入れる」でも「詳細を表示」からの選択でも、どちらでも進められます。</div>
+
+  <div class="stephead"><span class="n">02</span><h2>取引口座の申込み</h2></div>
+  <p style="font-size:14px">会員ページから取引口座を申請します。<b>ここの選択がいちばん大事です</b>。次の表のとおりに選んでください。</p>
+  <table>
+    <tr><th>プラットフォーム</th><td><b>MT4</b>(MetaTrader 4)を選択 ※MT5ではありません</td></tr>
+    <tr><th>口座タイプ</th><td><b>Innovative Liquidity Connector(ILC)</b>を選択</td></tr>
+    <tr><th>レバレッジ</th><td><b>1:200</b>(200倍)を選択</td></tr>
+    <tr><th>口座通貨</th><td><b>JPY(日本円)</b>を推奨</td></tr>
+    <tr><th>備考・その他連絡事項</th><td><b>5233450</b> と入力(IB紐づけ用。入力がないとEA・キャンペーンの対象外になります)</td></tr>
+  </table>
+  <div class="pending">📷 この画面のスクリーンショットは準備中です(文章のとおりに選べば大丈夫です)</div>
+
+  <div class="stephead"><span class="n">03</span><h2>お客様情報の入力</h2></div>
+  <table>
+    <tr><th>氏名</th><td>ローマ字で入力(例: 山田 太郎 → <b>Taro Yamada</b>)</td></tr>
+    <tr><th>生年月日</th><td>西暦で選択</td></tr>
+    <tr><th>住所</th><td>英語表記で入力。<b>日本の住所は「番地→町名→市区町村→都道府県」の逆順</b>です<br>例: 東京都新宿区西新宿1-2-3 メゾン101号室<br>→ <b>#101 Maison, 1-2-3 Nishi-Shinjuku, Shinjuku-ku, Tokyo</b><br>(変換に迷ったら「住所 英語表記 変換」で検索すると無料ツールがあります)</td></tr>
+    <tr><th>電話番号</th><td>先頭の0を取って国番号+81をつける(例: 090-1234-5678 → <b>+81 90-1234-5678</b>)</td></tr>
+    <tr><th>投資経験などの質問</th><td>正直に回答すればOKです(審査で不利になることはほぼありません)</td></tr>
+  </table>
+  <div class="pending">📷 この画面のスクリーンショットは準備中です</div>
+
+  <div class="stephead"><span class="n">04</span><h2>本人確認書類のアップロード</h2></div>
+  <table>
+    <tr><th>本人確認書類(どれか1つ)</th><td>運転免許証(両面)/パスポート/マイナンバーカード(表面)</td></tr>
+    <tr><th>住所確認書類(どれか1つ)</th><td>住民票/公共料金の請求書/銀行・カードの明細書 など<br><b>※発行から3ヶ月以内・氏名と住所が見えるもの</b></td></tr>
+  </table>
+  <div class="tip">💡 スマホで撮影する場合は「四隅が全部写っている」「文字が読める」「光の反射がない」の3点でほぼ一発承認されます。</div>
+  <p style="font-size:14px">提出後、<b>1〜2営業日ほどで承認メール</b>が届き、MT4のログイン情報(口座番号・パスワード・サーバー名)が発行されます。</p>
+</section>
+
+<!-- ============ B. 追加口座 ============ -->
+<section class="wrap" id="add">
+  <div class="stephead"><span class="n">B</span><h2>すでに口座がある方(追加口座)</h2></div>
+  <p style="font-size:14px">新規登録は不要です。<b>会員ページにログイン→追加口座の申請</b>だけで完了します(書類の再提出も原則不要)。</p>
+  <table>
+    <tr><th>申請場所</th><td>会員ページ内の「追加口座」メニューから</td></tr>
+    <tr><th>選ぶもの</th><td>新規と同じ: <b>MT4/ILC/レバレッジ200倍/JPY</b></td></tr>
+    <tr><th>その他の連絡事項(備考欄)</th><td><b>5233450</b> と必ず入力(これがIB紐づけの条件です。入力がないとキャンペーン対象外)</td></tr>
+  </table>
+  <div class="warn">⚠️ EAごとに口座は必ず分けてください(1口座1EA)。すでにローレルを稼働中の口座にリオラ・フィリアを追加することはできません。</div>
+  <div class="pending">📷 この画面のスクリーンショットは準備中です</div>
+</section>
+
+<!-- ============ C. 開設後 ============ -->
+<section class="wrap" id="after">
+  <div class="stephead"><span class="n">C</span><h2>開設できたら(入金〜稼働開始)</h2></div>
+  <table>
+    <tr><th>① 入金</th><td>会員ページの入金メニューから。<b>リオラ・フィリアは20万円〜、ローレルは30万円〜を推奨</b></td></tr>
+    <tr><th>② 連絡</th><td>LINE・X・DiscordいずれかのDMで「<b>希望EA名+口座番号</b>」を送信(キャンペーン利用の方は「キャンペーン利用」も添えてください)</td></tr>
+    <tr><th>③ 設定・稼働</th><td>こちらで設定をご案内します。リオラ・フィリアはVPS不要・スマホのみでOK</td></tr>
+  </table>
+  <a class="btn line" href="../campaign/">🎁 3ヶ月実質無料キャンペーンの詳細はこちら</a>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="wrap" id="faq">
+  <div class="stephead"><span class="n">?</span><h2>よくあるつまずき</h2></div>
+  <table>
+    <tr><th>認証メールが届かない</th><td>迷惑メールフォルダを確認。Gmail推奨です</td></tr>
+    <tr><th>備考欄に5233450を入れ忘れた</th><td>そのままDMでご相談ください。対応方法をご案内します</td></tr>
+    <tr><th>書類が承認されない</th><td>四隅切れ・ピンボケ・発行3ヶ月超えが3大原因。撮り直しで大抵通ります</td></tr>
+    <tr><th>ILCが見つからない</th><td>口座タイプの選択肢に「Innovative Liquidity Connector」が表示されているか確認。見つからなければDMでスクショを送ってください</td></tr>
+  </table>
+  <p style="font-size:14px;margin-top:16px">解決しないときは、遠慮なくLINE・X・DiscordのDMへどうぞ。画面のスクリーンショットを添えてもらえると早いです😊</p>
+</section>
+
+<footer>
+  <div class="fx">ESORA EA SERIES</div>
+  <p>Tradeviewは海外ライセンスに基づく業者であり、日本の金商法上の登録はありません。口座開設はご自身の判断と責任で行ってください。<br>当サイトはTradeviewのIB(紹介者)であり、口座開設・取引に応じて報酬を受け取ることがあります。<a href="../">免責事項の全文はこちら</a></p>
+</footer>
+</body>
+</html>
