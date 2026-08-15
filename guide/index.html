@@ -94,33 +94,66 @@ footer a{color:inherit}
   <p style="font-size:14px">入力したら「<b>次へ</b>」→ 届いた<b>認証メールのリンク</b>をタップして、会員ページにログインします。</p>
   <div class="tip">💡 Cookieの確認画面が出たら「すべてを受け入れる」でも「詳細を表示」からの選択でも、どちらでも進められます。</div>
 
-  <div class="stephead"><span class="n">02</span><h2>取引口座の申込み</h2></div>
-  <p style="font-size:14px">会員ページから取引口座を申請します。<b>ここの選択がいちばん大事です</b>。次の表のとおりに選んでください。</p>
+  <div class="stephead"><span class="n">02</span><h2>氏名・居住国・事業体の選択</h2></div>
+  <div class="shot"><img src="img/step2_entity.png" alt="氏名・居住国・事業体の選択画面" loading="lazy"></div>
   <table>
-    <tr><th>プラットフォーム</th><td><b>MT4</b>(MetaTrader 4)を選択 ※MT5ではありません</td></tr>
-    <tr><th>口座タイプ</th><td><b>Innovative Liquidity Connector(ILC)</b>を選択</td></tr>
-    <tr><th>レバレッジ</th><td><b>1:200</b>(200倍)を選択</td></tr>
+    <tr><th>氏名(ローマ字)</th><td>半角ローマ字で「名前 苗字」または「苗字 名前」(例: <b>TARO YAMADA</b>)</td></tr>
+    <tr><th>居住国</th><td><b>Japan</b> を選択</td></tr>
+    <tr><th>事業体</th><td><b>Tradeview Financial Markets S.A.C. (Peru)</b> を選択(日本在住の方はこの1択のみ表示されます)</td></tr>
+  </table>
+
+  <div class="stephead"><span class="n">03</span><h2>確認画面にチェック</h2></div>
+  <div class="shot"><img src="img/step3_confirm.png" alt="口座を開設する確認画面" loading="lazy"></div>
+  <p style="font-size:14px">「事業体の切り替えを求められていないことを認めます」= <b>自分の意思で開設していますという確認</b>です。チェックを入れて「次へ」。</p>
+
+  <div class="stephead"><span class="n">04</span><h2>アカウントタイプの選択</h2></div>
+  <div class="shot"><img src="img/step4_accttype.png" alt="アカウントタイプ選択画面" loading="lazy"></div>
+  <table>
+    <tr><th>アカウントタイプ</th><td><b>ライブ口座</b>を選択(デモではありません)</td></tr>
+    <tr><th>口座種類</th><td><b>個人</b>を選択(法人の方は「法人」)</td></tr>
+    <tr><th>利用規則</th><td>Disclaimerを確認のうえ、チェックを入れて「次へ」</td></tr>
+  </table>
+
+  <div class="stephead"><span class="n">05</span><h2>本人確認のご案内</h2></div>
+  <div class="shot"><img src="img/step5_prepare.png" alt="本人確認の準備画面" loading="lazy"></div>
+  <p style="font-size:14px">この後の本人確認で使う書類の案内です。手元に用意しておきましょう。</p>
+  <table>
+    <tr><th>写真付き本人確認書類(1点)</th><td>運転免許証/パスポート/マイナンバーカード など</td></tr>
+    <tr><th>現住所確認書類(1点)</th><td>3ヶ月以内発行の住民票/公共料金の請求書/クレジットカード請求書 など</td></tr>
+    <tr><th>チェック欄</th><td>(必須)電子的な本人確認への同意にチェック。(任意)のマーケティング受信は<b>チェックなしでOK</b></td></tr>
+  </table>
+
+  <div class="stephead"><span class="n">06</span><h2>ご登録情報の入力</h2></div>
+  <div class="shot"><img src="img/step6_userinfo.png" alt="ご登録情報の入力例" loading="lazy"></div>
+  <table>
+    <tr><th>電話番号</th><td>国旗マークで日本(+81)を選び、<b>先頭の0を除いた番号</b>を半角で(例: 090-1234-5678 → <b>9012345678</b>)</td></tr>
+    <tr><th>国籍/居住国</th><td>どちらも <b>Japan</b></td></tr>
+    <tr><th>生年月日</th><td>カレンダーから選択(yyyy-mm-dd)</td></tr>
+    <tr><th>都道府県(半角ローマ字)</th><td>例: 東京都 → <b>Tokyo</b>、愛知県 → <b>Aichi</b></td></tr>
+    <tr><th>市区町村(半角ローマ字)</th><td>例: 新宿区 → <b>Shinjuku</b></td></tr>
+    <tr><th>住所</th><td>ローマ字で入力。画像のような形式でOKです<br>例: <b>Japan,tokyo shinjuku nishi-shinjuku 1-2-3</b><br>(迷ったら「住所 英語表記 変換」で検索すると無料ツールがあります)</td></tr>
+    <tr><th>郵便番号(半角数字)</th><td>ハイフンなしで入力(例: <b>1600023</b>)</td></tr>
+    <tr><th>税務上の米国市民/居住者?</th><td><b>いいえ</b>(該当する方を除く)</td></tr>
+  </table>
+
+  <div class="stephead"><span class="n">07</span><h2>口座タイプ(取引市場)の選択</h2></div>
+  <div class="shot"><img src="img/step7_market.png" alt="取引市場の選択画面" loading="lazy"></div>
+  <p style="font-size:14px">取引市場は <b>外国為替(Forex)</b> を選択。続く画面では次の表のとおりに選んでください(<b>ここがいちばん大事です</b>)。</p>
+  <table>
+    <tr><th>プラットフォーム</th><td><b>MT4</b>(MetaTrader 4)※MT5ではありません</td></tr>
+    <tr><th>口座タイプ</th><td><b>Innovative Liquidity Connector(ILC)</b></td></tr>
+    <tr><th>レバレッジ</th><td><b>1:200</b>(200倍)</td></tr>
     <tr><th>口座通貨</th><td><b>JPY(日本円)</b>を推奨</td></tr>
     <tr><th>備考・その他連絡事項</th><td><b>5233450</b> と入力(IB紐づけ用。入力がないとEA・キャンペーンの対象外になります)</td></tr>
   </table>
-  <div class="pending">📷 この画面のスクリーンショットは準備中です(文章のとおりに選べば大丈夫です)</div>
 
-  <div class="stephead"><span class="n">03</span><h2>お客様情報の入力</h2></div>
+  <div class="stephead"><span class="n">08</span><h2>本人確認(かんたんな方でOK)</h2></div>
+  <div class="shot"><img src="img/step8_kyc.png" alt="本人確認方法の選択画面" loading="lazy"></div>
   <table>
-    <tr><th>氏名</th><td>ローマ字で入力(例: 山田 太郎 → <b>Taro Yamada</b>)</td></tr>
-    <tr><th>生年月日</th><td>西暦で選択</td></tr>
-    <tr><th>住所</th><td>英語表記で入力。<b>日本の住所は「番地→町名→市区町村→都道府県」の逆順</b>です<br>例: 東京都新宿区西新宿1-2-3 メゾン101号室<br>→ <b>#101 Maison, 1-2-3 Nishi-Shinjuku, Shinjuku-ku, Tokyo</b><br>(変換に迷ったら「住所 英語表記 変換」で検索すると無料ツールがあります)</td></tr>
-    <tr><th>電話番号</th><td>先頭の0を取って国番号+81をつける(例: 090-1234-5678 → <b>+81 90-1234-5678</b>)</td></tr>
-    <tr><th>投資経験などの質問</th><td>正直に回答すればOKです(審査で不利になることはほぼありません)</td></tr>
+    <tr><th>本人確認書類</th><td>プルダウンから提出する書類の種類を選択(免許証がおすすめ)</td></tr>
+    <tr><th>提出方法</th><td><b>スピード認証(最短2分・推奨)</b>を選ぶとスマホのカメラで撮影してすぐ完了します。うまくいかない場合は「ファイルのアップロード」でもOK</td></tr>
   </table>
-  <div class="pending">📷 この画面のスクリーンショットは準備中です</div>
-
-  <div class="stephead"><span class="n">04</span><h2>本人確認書類のアップロード</h2></div>
-  <table>
-    <tr><th>本人確認書類(どれか1つ)</th><td>運転免許証(両面)/パスポート/マイナンバーカード(表面)</td></tr>
-    <tr><th>住所確認書類(どれか1つ)</th><td>住民票/公共料金の請求書/銀行・カードの明細書 など<br><b>※発行から3ヶ月以内・氏名と住所が見えるもの</b></td></tr>
-  </table>
-  <div class="tip">💡 スマホで撮影する場合は「四隅が全部写っている」「文字が読める」「光の反射がない」の3点でほぼ一発承認されます。</div>
+  <div class="tip">💡 撮影のコツは「四隅が全部写っている」「文字が読める」「光の反射がない」の3点。これでほぼ一発承認されます。</div>
   <p style="font-size:14px">提出後、<b>1〜2営業日ほどで承認メール</b>が届き、MT4のログイン情報(口座番号・パスワード・サーバー名)が発行されます。</p>
 </section>
 
