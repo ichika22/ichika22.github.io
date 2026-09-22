@@ -654,59 +654,64 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
       <b>将来の運用成果の予測・保証ではありません。</b>実際は毎年一定には増えず、各EA相応のドローダウンを挟みながらの推移になります。負ける年もあります。</p>
     <div class="gchart rv d2">
       <svg viewBox="0 0 700 330" role="img" aria-label="100万円スタート10年複利イメージ（対数スケール）">
-        <g stroke="rgba(239,231,211,.14)" stroke-width="1">
+        <g stroke="rgba(90,74,34,.15)" stroke-width="1">
           <line x1="40" y1="280" x2="600" y2="280"/><line x1="40" y1="217.5" x2="600" y2="217.5"/>
           <line x1="40" y1="155" x2="600" y2="155"/><line x1="40" y1="92.5" x2="600" y2="92.5"/>
           <line x1="40" y1="30" x2="600" y2="30"/>
         </g>
-        <g fill="#93896f" font-size="11" font-family="sans-serif">
+        <g fill="#7a6f57" font-size="11" font-family="sans-serif">
           <text x="36" y="284" text-anchor="end">100万</text><text x="36" y="221" text-anchor="end">1000万</text>
           <text x="36" y="159" text-anchor="end">1億</text><text x="36" y="96" text-anchor="end">10億</text>
           <text x="36" y="34" text-anchor="end">100億</text>
           <text x="40" y="302">0年</text><text x="320" y="302" text-anchor="middle">5年</text><text x="600" y="302" text-anchor="end">10年</text>
         </g>
-        <polyline fill="none" stroke="#e3c87e" stroke-width="3" stroke-linejoin="round"
+        <polyline fill="none" stroke="#0f231a" stroke-width="3.2" stroke-linejoin="round"
+          points="40,280 96,253.0 152,226.1 208,199.1 264,172.2 320,145.2 376,118.2 432,91.3 488,64.3 544,37.4 600,10.4"/>
+        <polyline fill="none" stroke="#c9a34c" stroke-width="3" stroke-linejoin="round"
           points="40,280 96,255.1 152,230.3 208,205.4 264,180.5 320,155.6 376,130.8 432,105.9 488,81.0 544,56.1 600,31.3"/>
-        <polyline fill="none" stroke="#f0e7d0" stroke-width="2.4" stroke-dasharray="1,0" stroke-linejoin="round" opacity=".95"
+        <polyline fill="none" stroke="#d99a4e" stroke-width="2.4" stroke-linejoin="round" opacity=".95"
           points="40,280 96,261.2 152,242.4 208,223.6 264,204.8 320,185.9 376,167.1 432,148.3 488,129.5 544,110.7 600,91.9"/>
-        <polyline fill="none" stroke="#63b3a8" stroke-width="2.4" stroke-linejoin="round"
+        <polyline fill="none" stroke="#3f9a8c" stroke-width="2.4" stroke-linejoin="round"
           points="40,280 96,267.9 152,255.9 208,243.8 264,231.8 320,219.6 376,207.6 432,195.5 488,183.4 544,171.4 600,159.3"/>
         <g font-size="12" font-weight="bold" font-family="sans-serif">
-          <text x="606" y="35" fill="#e3c87e">95.4億</text>
-          <text x="606" y="96" fill="#f0e7d0">10.2億</text>
-          <text x="606" y="163" fill="#63b3a8">8,535万</text>
+          <text x="606" y="14" fill="#0f231a">206億</text>
+          <text x="606" y="40" fill="#c9a34c">95.4億</text>
+          <text x="606" y="96" fill="#d99a4e">10.2億</text>
+          <text x="606" y="163" fill="#3f9a8c">8,535万</text>
         </g>
       </svg>
       <div class="glegend">
-        <span><i style="background:#e3c87e"></i>LAUREL（年+150%想定）</span>
-        <span><i style="background:#f0e7d0"></i>LIORA（年+100%想定）</span>
-        <span><i style="background:#63b3a8"></i>PHILIA（年+56%想定）</span>
+        <span><i style="background:#0f231a"></i>LAUREL 2.0（年+170%想定）</span>
+        <span><i style="background:#c9a34c"></i>LAUREL（年+150%想定）</span>
+        <span><i style="background:#d99a4e"></i>LIORA（年+100%想定）</span>
+        <span><i style="background:#3f9a8c"></i>PHILIA（年+56%想定）</span>
       </div>
     </div>
     <div class="tbl rv d3" style="margin-top:34px">
     <table>
       <thead><tr><th>経過</th>
+        <th>LAUREL 2.0<span class="sub">年+170%想定</span></th>
         <th>LAUREL<span class="sub">年+150%想定</span></th>
         <th>LIORA<span class="sub">年+100%想定</span></th>
         <th>PHILIA<span class="sub">年+56%想定</span></th>
       </tr></thead>
       <tbody>
-        <tr><th>1年後</th><td class="lau">250万円</td><td class="lio">200万円</td><td class="phi">156万円</td></tr>
-        <tr><th>2年後</th><td class="lau">625万円</td><td class="lio">400万円</td><td class="phi">243万円</td></tr>
-        <tr><th>3年後</th><td class="lau">1,563万円</td><td class="lio">800万円</td><td class="phi">380万円</td></tr>
-        <tr><th>4年後</th><td class="lau">3,906万円</td><td class="lio">1,600万円</td><td class="phi">592万円</td></tr>
-        <tr><th>5年後</th><td class="lau">9,766万円</td><td class="lio">3,200万円</td><td class="phi">924万円</td></tr>
-        <tr><th>6年後</th><td class="lau">2.44億円</td><td class="lio">6,400万円</td><td class="phi">1,441万円</td></tr>
-        <tr><th>7年後</th><td class="lau">6.10億円</td><td class="lio">1.28億円</td><td class="phi">2,248万円</td></tr>
-        <tr><th>8年後</th><td class="lau">15.2億円</td><td class="lio">2.56億円</td><td class="phi">3,507万円</td></tr>
-        <tr><th>9年後</th><td class="lau">38.1億円</td><td class="lio">5.12億円</td><td class="phi">5,471万円</td></tr>
-        <tr><th>10年後</th><td class="lau"><b class="pos">95.4億円</b></td><td class="lio"><b>10.2億円</b></td><td class="phi"><b>8,535万円</b></td></tr>
+        <tr><th>1年後</th><td class="l2">270万円</td><td class="lau">250万円</td><td class="lio">200万円</td><td class="phi">156万円</td></tr>
+        <tr><th>2年後</th><td class="l2">729万円</td><td class="lau">625万円</td><td class="lio">400万円</td><td class="phi">243万円</td></tr>
+        <tr><th>3年後</th><td class="l2">1,968万円</td><td class="lau">1,563万円</td><td class="lio">800万円</td><td class="phi">380万円</td></tr>
+        <tr><th>4年後</th><td class="l2">5,314万円</td><td class="lau">3,906万円</td><td class="lio">1,600万円</td><td class="phi">592万円</td></tr>
+        <tr><th>5年後</th><td class="l2">1.43億円</td><td class="lau">9,766万円</td><td class="lio">3,200万円</td><td class="phi">924万円</td></tr>
+        <tr><th>6年後</th><td class="l2">3.87億円</td><td class="lau">2.44億円</td><td class="lio">6,400万円</td><td class="phi">1,441万円</td></tr>
+        <tr><th>7年後</th><td class="l2">10.5億円</td><td class="lau">6.10億円</td><td class="lio">1.28億円</td><td class="phi">2,248万円</td></tr>
+        <tr><th>8年後</th><td class="l2">28.2億円</td><td class="lau">15.2億円</td><td class="lio">2.56億円</td><td class="phi">3,507万円</td></tr>
+        <tr><th>9年後</th><td class="l2">76.3億円</td><td class="lau">38.1億円</td><td class="lio">5.12億円</td><td class="phi">5,471万円</td></tr>
+        <tr><th>10年後</th><td class="l2"><b class="pos">206億円</b></td><td class="lau"><b class="pos">95.4億円</b></td><td class="lio"><b>10.2億円</b></td><td class="phi"><b>8,535万円</b></td></tr>
       </tbody>
     </table>
     </div>
     <p class="rv d3" style="font-size:12px;opacity:.65;margin-top:18px">
-      ※前提: ローレル＝勝ち年3〜4倍と負け年をならした想定／リオラ＝実運用2〜3倍想定の中間／PHILIA＝バックテスト年平均リターン（約56%）。
-      いずれも仮定に基づく机上の複利計算であり、将来の運用成果を予測・示唆・保証するものではありません。途中には各EA相応のドローダウン（ローレル〜72%実績、リオラ〜40%想定、PHILIA年平均27.3%）が必ず入り、資金の大半を失う可能性もあります。</p>
+      ※前提: ローレル2.0＝24年バックテストの年率（366%）を実運用想定で半分以下に割り引いた+170%／ローレル＝勝ち年3〜4倍と負け年をならした想定／リオラ＝実運用2〜3倍想定の中間／PHILIA＝バックテスト年平均リターン（約56%）。
+      いずれも仮定に基づく机上の複利計算であり、将来の運用成果を予測・示唆・保証するものではありません。途中には各EA相応のドローダウン（ローレル2.0 年平均44%（BT）、ローレル〜72%実績、リオラ〜40%想定、PHILIA年平均27.3%）が必ず入り、資金の大半を失う可能性もあります。</p>
   </div>
 </section>
 
