@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ESORA EA SERIES ― ローレル / リオラ / PHILIA</title>
-<meta name="description" content="増やし方には、性格がある。爆発のローレル、光のリオラ、蝶のフィリア。全成績をMyfxbookでリアルタイム公開。">
-<meta property="og:title" content="ESORA EA SERIES ― 増やし方には、性格がある。">
-<meta property="og:description" content="爆発のローレル、光のリオラ、蝶のフィリア。ドローダウンまで、全部見せる。">
+<title>ESORA EA SERIES ― ローレル 2.0 / ローレル / リオラ / PHILIA</title>
+<meta name="description" content="ローレル2.0登場。2003年からの24年検証で負けた年ゼロ。爆発のローレル、光のリオラ、蝶のフィリア。全成績をMyfxbookでリアルタイム公開。">
+<meta property="og:title" content="ESORA EA SERIES ― ローレル2.0、24年検証で負け年ゼロ。">
+<meta property="og:description" content="ローレルの爆発力そのままに、負けを浅く。24年の年別検証で負けた年はゼロ。月額200円。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ichika22.github.io/">
 <meta property="og:image" content="https://ichika22.github.io/og.png">
@@ -51,11 +51,11 @@ section{position:relative;overflow:hidden;scroll-margin-top:58px}
 
 /* ---------- nav ---------- */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:26px;
-  padding:14px 26px;background:rgba(20,17,12,.72);backdrop-filter:blur(10px);color:#efe7d3}
+  padding:14px 26px;background:rgba(252,248,238,.82);backdrop-filter:blur(12px);color:#2a2418;border-bottom:1px solid rgba(201,163,76,.25)}
 nav .logo{font-family:var(--serif);font-weight:600;letter-spacing:.35em;font-size:15px}
 nav .links{margin-left:auto;display:flex;gap:22px;font-size:13px;letter-spacing:.12em}
 nav .links a{text-decoration:none;opacity:.82;white-space:nowrap}
-nav .links a:hover{opacity:1;color:var(--gold2)}
+nav .links a:hover{opacity:1;color:var(--sun)}
 nav .cta{background:var(--gold);color:#1c1508;text-decoration:none;font-weight:700;font-size:13px;
   padding:8px 18px;border-radius:2px;letter-spacing:.08em;white-space:nowrap}
 @media(max-width:760px){
@@ -70,18 +70,40 @@ nav .cta{background:var(--gold);color:#1c1508;text-decoration:none;font-weight:7
 
 /* ---------- hero ---------- */
 #hero{min-height:100svh;display:flex;align-items:center;background:
-  radial-gradient(1200px 700px at 70% -10%,rgba(201,163,76,.16),transparent 60%),#14110c;color:#f2ebda}
+  radial-gradient(900px 600px at 15% 20%,rgba(255,255,255,.9),transparent 60%),
+  radial-gradient(1100px 700px at 85% 0%,rgba(227,200,126,.55),transparent 60%),
+  radial-gradient(900px 700px at 70% 100%,rgba(141,190,214,.35),transparent 60%),
+  linear-gradient(160deg,#fbf7ec,#f1eddf 55%,#e9eff3);color:var(--ink)}
 #hero .wrap{padding-top:120px;padding-bottom:90px}
-.kicker{font-family:var(--serif);letter-spacing:.42em;font-size:13px;color:var(--gold2);text-transform:uppercase}
+.kicker{font-family:var(--serif);letter-spacing:.42em;font-size:13px;color:var(--sun);text-transform:uppercase}
 #hero h1{font-family:var(--mincho);font-weight:700;font-size:clamp(38px,7.2vw,84px);line-height:1.35;margin:26px 0 22px}
-#hero p.lead{font-family:var(--mincho);font-size:clamp(15px,2.4vw,19px);color:#d8cfb8;max-width:640px}
-.hero-triad{display:flex;gap:min(5vw,60px);margin-top:56px;flex-wrap:wrap}
-.triad{display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:#e8dfc8}
-.triad svg{width:84px;height:84px}
+#hero p.lead{font-family:var(--mincho);font-size:clamp(15px,2.4vw,19px);color:#5a5040;max-width:640px}
+.hero-triad{display:flex;gap:min(4vw,48px);margin-top:56px;flex-wrap:wrap}
+.triad{display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:#3a3226}
+.triad svg{width:84px;height:84px;filter:drop-shadow(0 8px 14px rgba(185,138,46,.35))}
 .triad span{font-family:var(--serif);letter-spacing:.3em;font-size:12px}
-.triad em{font-style:normal;font-size:11px;color:#9d937c;letter-spacing:.1em}
-.scrolldn{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#8f8569;font-size:11px;letter-spacing:.3em;text-align:center}
-.scrolldn::after{content:"";display:block;width:1px;height:44px;background:linear-gradient(#8f8569,transparent);margin:10px auto 0;animation:drop 2s infinite}
+.triad em{font-style:normal;font-size:11px;color:#8a7f66;letter-spacing:.1em}
+.scrolldn{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#9a9078;font-size:11px;letter-spacing:.3em;text-align:center}
+.scrolldn::after{content:"";display:block;width:1px;height:44px;background:linear-gradient(#9a9078,transparent);margin:10px auto 0;animation:drop 2s infinite}
+
+/* ---------- 3D objects (pure CSS) ---------- */
+.scene{position:absolute;inset:0;pointer-events:none;perspective:1200px;z-index:0;overflow:hidden}
+.coin{position:absolute;width:var(--sz,120px);height:var(--sz,120px);border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#fff3c4 0,#e3c87e 28%,#c9a34c 62%,#8f6a1e 100%);
+  box-shadow:inset -8px -10px 22px rgba(90,60,10,.35),inset 8px 10px 20px rgba(255,255,255,.55),0 30px 50px rgba(120,90,20,.28);
+  transform-style:preserve-3d;animation:coin var(--dur,14s) linear infinite;opacity:.9}
+.coin::after{content:"";position:absolute;inset:14%;border-radius:50%;border:2px solid rgba(255,250,225,.55)}
+@keyframes coin{0%{transform:rotateY(0) rotateX(12deg) translateY(0)}50%{transform:rotateY(180deg) rotateX(12deg) translateY(-18px)}100%{transform:rotateY(360deg) rotateX(12deg) translateY(0)}}
+.card3d{position:absolute;width:250px;padding:20px 22px;border-radius:16px;color:#fff7e0;
+  background:linear-gradient(135deg,#1c3b2a,#0f231a);border:1px solid rgba(227,200,126,.6);
+  box-shadow:0 40px 70px rgba(30,40,30,.35),inset 0 1px 0 rgba(255,255,255,.2);
+  transform-style:preserve-3d;animation:tilt 9s ease-in-out infinite;pointer-events:auto;text-decoration:none}
+.card3d .c1{font-family:var(--serif);letter-spacing:.3em;font-size:11px;color:#e3c87e}
+.card3d .c2{font-family:var(--mincho);font-weight:700;font-size:26px;line-height:1.3;margin:6px 0 4px}
+.card3d .c3{font-size:11px;opacity:.8}
+@keyframes tilt{0%,100%{transform:rotateY(-14deg) rotateX(8deg) translateY(0)}50%{transform:rotateY(10deg) rotateX(-4deg) translateY(-14px)}}
+@media(max-width:900px){.card3d{display:none}.coin{opacity:.5}}
+@media(prefers-reduced-motion:reduce){.coin,.card3d,.tilt{animation:none!important}}
 @keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 /* ---------- shared EA section ---------- */
@@ -109,18 +131,51 @@ nav .cta{background:var(--gold);color:#1c1508;text-decoration:none;font-weight:7
 .btn.line{border:1px solid currentColor}
 
 /* ---------- ESSENCE ---------- */
-#essence{background:#1a1611;color:#e8dfc8;padding:110px 0 100px}
+#essence{background:linear-gradient(180deg,#fbf7ec,#f3ecd9);color:var(--ink);padding:110px 0 100px}
 #essence h2{font-family:var(--mincho);font-weight:700;font-size:clamp(28px,5vw,46px);margin:14px 0 18px}
 #essence .esub{font-family:var(--mincho);opacity:.85;max-width:680px;margin-bottom:48px}
-.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.pillar{border:1px solid rgba(201,163,76,.35);border-radius:6px;padding:30px 26px;background:rgba(201,163,76,.05)}
-.pillar .pn{font-family:var(--serif);font-size:15px;letter-spacing:.3em;color:var(--gold);margin-bottom:14px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;perspective:1400px}
+.pillar{border:1px solid rgba(201,163,76,.45);border-radius:14px;padding:30px 26px;background:rgba(255,255,255,.7);
+  box-shadow:0 18px 40px rgba(120,90,20,.10);transition:transform .35s ease,box-shadow .35s ease;transform-style:preserve-3d}
+.pillar:hover{transform:rotateX(4deg) rotateY(-5deg) translateY(-6px);box-shadow:0 30px 60px rgba(120,90,20,.18)}
+.pillar .pn{font-family:var(--serif);font-size:15px;letter-spacing:.3em;color:var(--sun);margin-bottom:14px}
 .pillar h3{font-family:var(--mincho);font-weight:700;font-size:21px;line-height:1.5;margin-bottom:14px}
-.pillar h3 span{display:block;font-size:13px;font-weight:500;color:var(--gold2);letter-spacing:.12em;margin-top:8px}
+.pillar h3 span{display:block;font-size:13px;font-weight:500;color:var(--sun);letter-spacing:.12em;margin-top:8px}
 .pillar p{font-size:13.5px;opacity:.85}
-.pillar b{color:var(--gold2)}
+.pillar b{color:#8a651c}
 .emore{font-size:13px;opacity:.8;margin-top:40px}
-.emore a{color:var(--gold2);font-weight:700;text-decoration:none;margin-left:6px}
+.emore a{color:var(--sun);font-weight:700;text-decoration:none;margin-left:6px}
+
+/* ---------- LAUREL 2.0 ---------- */
+#laurel2{background:
+  radial-gradient(900px 600px at 80% 10%,rgba(227,200,126,.55),transparent 60%),
+  radial-gradient(800px 600px at 10% 90%,rgba(141,190,214,.28),transparent 60%),
+  linear-gradient(170deg,#fffdf5,#f4efe0);color:var(--ink)}
+#laurel2 .stats{background:rgba(185,138,46,.28)}
+#laurel2 .stat{background:#fffdf4}
+#laurel2 .stat .n{color:#8a651c}
+#laurel2 .type{color:#8a651c}
+.unbeaten{position:relative;margin:10px 0 40px;padding:34px 30px;border-radius:20px;color:#fff7e0;
+  background:linear-gradient(135deg,#1c3b2a,#0f231a 60%,#173423);border:1px solid rgba(227,200,126,.6);
+  box-shadow:0 40px 80px rgba(30,40,30,.28);overflow:hidden}
+.unbeaten .big{font-family:var(--mincho);font-weight:700;font-size:clamp(30px,5.6vw,58px);line-height:1.25;letter-spacing:.02em}
+.unbeaten .big b{color:#e3c87e;font-size:1.25em}
+.unbeaten .sm{font-size:12.5px;opacity:.85;margin-top:14px;max-width:640px}
+.unbeaten .emblem{position:absolute;right:-20px;top:-30px;width:min(40vw,320px);opacity:.28;transform-style:preserve-3d;animation:spinY 16s linear infinite}
+@keyframes spinY{from{transform:rotateY(0)}to{transform:rotateY(360deg)}}
+.choice{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:36px 0 10px;perspective:1400px}
+.choice div{background:rgba(255,255,255,.75);border:1px solid rgba(185,138,46,.45);border-radius:14px;padding:22px 20px;
+  box-shadow:0 14px 36px rgba(120,90,20,.10);transition:transform .35s ease}
+.choice div:hover{transform:rotateX(4deg) rotateY(-4deg) translateY(-5px)}
+.choice b{display:block;font-family:var(--mincho);font-size:16px;margin-bottom:8px;color:#5a4a22}
+.choice p{font-size:13px;opacity:.85}
+.vs{overflow-x:auto;border:1px solid rgba(185,138,46,.45);border-radius:12px;background:rgba(255,255,255,.7);margin-top:26px}
+.vs table{min-width:520px}
+.vs th,.vs td{border-bottom:1px solid rgba(90,74,34,.15);color:var(--ink)}
+.vs thead th{color:#8a651c}
+.vs tbody th{color:#6e6247}
+.vs td.new{background:rgba(227,200,126,.28);font-weight:700}
+.vs td.old{opacity:.8}
 
 /* ---------- LAUREL ---------- */
 #laurel{background:
@@ -159,53 +214,56 @@ nav .cta{background:var(--gold);color:#1c1508;text-decoration:none;font-weight:7
 .nisa-note{font-size:12px;opacity:.65;max-width:660px;margin-top:-30px;margin-bottom:44px}
 
 /* ---------- compare ---------- */
-#compare{background:#17140e;color:#efe7d3;padding:110px 0 100px}
+#compare{background:linear-gradient(180deg,#f4efe0,#fbf7ec);color:var(--ink);padding:110px 0 100px}
 #compare h2{font-family:var(--mincho);font-weight:700;font-size:clamp(28px,5vw,44px);margin:12px 0 40px}
-.tbl{overflow-x:auto;border:1px solid rgba(201,163,76,.35);border-radius:6px}
-table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}
-th,td{padding:15px 16px;text-align:center;border-bottom:1px solid rgba(239,231,211,.12)}
-thead th{font-family:var(--serif);font-size:16px;letter-spacing:.14em;padding-top:22px}
+.tbl{overflow-x:auto;border:1px solid rgba(185,138,46,.45);border-radius:12px;background:rgba(255,255,255,.7);box-shadow:0 18px 40px rgba(120,90,20,.10)}
+table{border-collapse:collapse;width:100%;min-width:820px;font-size:14px}
+th,td{padding:15px 16px;text-align:center;border-bottom:1px solid rgba(90,74,34,.14)}
+thead th{font-family:var(--serif);font-size:16px;letter-spacing:.14em;padding-top:22px;color:#8a651c}
 thead .sub{display:block;font-family:var(--mincho);font-size:12px;letter-spacing:.1em;opacity:.8;margin-top:4px}
-tbody th{font-weight:500;font-size:12.5px;letter-spacing:.12em;color:#b7ac90;text-align:left;white-space:nowrap}
-td.lau{background:rgba(22,49,31,.55)} td.lio{background:rgba(255,246,216,.07)} td.phi{background:rgba(201,163,76,.10)}
+tbody th{font-weight:500;font-size:12.5px;letter-spacing:.12em;color:#6e6247;text-align:left;white-space:nowrap}
+td.lau{background:rgba(22,49,31,.08)} td.l2{background:rgba(227,200,126,.32)} td.lio{background:rgba(255,246,216,.5)} td.phi{background:rgba(201,163,76,.10)}
 td b{font-family:var(--serif);font-size:17px}
-td .neg{color:#e08a6d} td .pos{color:#e3c87e}
-.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px}
-.who a{display:block;text-decoration:none;border:1px solid rgba(201,163,76,.4);border-radius:6px;padding:24px 22px;transition:background .3s,transform .3s}
-.who a:hover{background:rgba(201,163,76,.12);transform:translateY(-3px)}
+td .neg{color:#b8442c} td .pos{color:#8a651c}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:44px;perspective:1400px}
+.who a{display:block;text-decoration:none;border:1px solid rgba(185,138,46,.45);border-radius:14px;padding:24px 22px;background:rgba(255,255,255,.7);transition:background .3s,transform .3s;box-shadow:0 14px 36px rgba(120,90,20,.08)}
+.who a:hover{background:rgba(227,200,126,.25);transform:rotateX(4deg) translateY(-5px)}
 .who .q{font-family:var(--mincho);font-weight:700;font-size:16px;margin-bottom:8px}
 .who .a{font-size:13px;opacity:.8}
-.who .nm{font-family:var(--serif);letter-spacing:.25em;font-size:13px;color:var(--gold2);margin-top:14px}
+.who .nm{font-family:var(--serif);letter-spacing:.25em;font-size:13px;color:#8a651c;margin-top:14px}
 
 /* ---------- growth ---------- */
-#growth{background:#14110c;color:#efe7d3;padding:110px 0 100px}
+#growth{background:linear-gradient(180deg,#fbf7ec,#eef3f7);color:var(--ink);padding:110px 0 100px}
 #growth h2{font-family:var(--mincho);font-weight:700;font-size:clamp(28px,5vw,44px);margin:12px 0 18px}
-.gchart{background:rgba(239,231,211,.03);border:1px solid rgba(201,163,76,.3);border-radius:6px;padding:26px 18px 16px}
+.gchart{background:rgba(255,255,255,.7);border:1px solid rgba(185,138,46,.4);border-radius:12px;padding:26px 18px 16px;box-shadow:0 18px 40px rgba(120,90,20,.10)}
 .gchart svg{width:100%;height:auto;display:block}
 .glegend{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;font-size:12.5px;padding:14px 0 6px}
 .glegend i{display:inline-block;width:18px;height:4px;border-radius:2px;margin-right:7px;vertical-align:middle}
 
 /* ---------- broker ---------- */
-#broker{background:#1a1611;color:#e8dfc8;padding:100px 0 90px}
+#broker{background:linear-gradient(180deg,#eef3f7,#f7f1e2);color:var(--ink);padding:100px 0 90px}
 #broker h2{font-family:var(--mincho);font-weight:700;font-size:clamp(28px,5vw,44px);margin:14px 0 18px}
 #broker .esub{font-family:var(--mincho);opacity:.85;max-width:700px;margin-bottom:44px}
+#compare a[href^="shindan"]{color:#8a651c!important}
 #broker .bnote{font-size:12px;opacity:.65;margin-top:28px;max-width:760px}
 
 /* ---------- flow / cta ---------- */
-#start{background:linear-gradient(180deg,#17140e,#221c11);color:#f2ebda;padding:110px 0 90px}
+#start{background:linear-gradient(180deg,#f7f1e2,#fbf7ec);color:var(--ink);padding:110px 0 90px}
 #start h2{font-family:var(--mincho);font-weight:700;font-size:clamp(28px,5vw,44px);margin:12px 0 16px}
-.steps{counter-reset:st;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin:44px 0 10px}
-.step{border:1px solid rgba(201,163,76,.35);border-radius:6px;padding:26px 22px;position:relative}
-.step::before{counter-increment:st;content:"0" counter(st);font-family:var(--serif);font-size:34px;color:var(--gold);display:block;margin-bottom:10px}
+.steps{counter-reset:st;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin:44px 0 10px;perspective:1400px}
+.step{border:1px solid rgba(185,138,46,.45);border-radius:14px;padding:26px 22px;position:relative;background:rgba(255,255,255,.7);box-shadow:0 14px 36px rgba(120,90,20,.08);transition:transform .35s ease}
+.step:hover{transform:rotateX(4deg) translateY(-5px)}
+.step::before{counter-increment:st;content:"0" counter(st);font-family:var(--serif);font-size:34px;color:var(--sun);display:block;margin-bottom:10px}
 .step b{display:block;font-size:15px;margin-bottom:8px}
 .step p{font-size:13px;opacity:.8}
-.step code{background:rgba(201,163,76,.15);padding:2px 8px;border-radius:3px;font-size:12.5px;color:var(--gold2)}
+.step code{background:rgba(201,163,76,.2);padding:2px 8px;border-radius:3px;font-size:12.5px;color:#7a5c14}
 #start .btnrow{justify-content:center;margin-top:44px}
 #start .note{text-align:center;font-size:12px;opacity:.65;margin-top:18px}
-.already{border:1px solid rgba(201,163,76,.5);border-left:4px solid var(--gold);border-radius:4px;padding:20px 24px;margin-top:22px;background:rgba(201,163,76,.07)}
-.already b{color:var(--gold2)}
+.already{border:1px solid rgba(185,138,46,.5);border-left:4px solid var(--gold);border-radius:8px;padding:20px 24px;margin-top:22px;background:rgba(255,255,255,.6)}
+.already b{color:#7a5c14}
 .already p{font-size:13.5px;opacity:.9;margin-top:6px}
-.already code{background:rgba(201,163,76,.15);padding:2px 8px;border-radius:3px;color:var(--gold2)}
+.already code{background:rgba(201,163,76,.2);padding:2px 8px;border-radius:3px;color:#7a5c14}
+#start .btn.line{border-color:#7a5c14;color:#7a5c14}
 #philia .already{background:rgba(201,163,76,.10)}
 #philia .already b{color:#7a5c14}
 
@@ -222,12 +280,13 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
   <span class="logo">ESORA</span>
   <div class="links">
     <a href="#essence" class="hidem">本質</a>
+    <a href="#laurel2" style="color:var(--sun);font-weight:700">LAUREL 2.0</a>
     <a href="#laurel">LAUREL</a>
     <a href="#liora">LIORA</a>
     <a href="#philia">PHILIA</a>
     <a href="#compare" class="hidem">比較</a>
     <a href="#start">始め方</a>
-    <a href="guide/" style="color:var(--gold2)">開設ガイド</a>
+    <a href="guide/" style="color:var(--sun);font-weight:700">開設ガイド</a>
     <a href="en/" title="English">EN</a>
   </div>
   <a class="cta" href="#start">口座開設はこちら</a>
@@ -235,21 +294,48 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
 
 <!-- ================= HERO ================= -->
 <section id="hero">
+  <div class="scene" aria-hidden="true">
+    <div class="coin" style="--sz:150px;--dur:16s;right:12%;top:18%"></div>
+    <div class="coin" style="--sz:80px;--dur:11s;right:30%;top:62%;animation-delay:-4s"></div>
+    <div class="coin" style="--sz:48px;--dur:9s;left:6%;bottom:16%;animation-delay:-2s"></div>
+    <a class="card3d" href="#laurel2" style="right:8%;top:38%">
+      <div class="c1">NEW — LAUREL 2.0</div>
+      <div class="c2">24年間、<br>負けた年ゼロ。</div>
+      <div class="c3">2003〜2026年 年別バックテスト ／ 月額 ¥200</div>
+    </a>
+  </div>
   <div class="wrap">
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px">
+      <a href="#laurel2" style="display:inline-block;background:#0f231a;color:#e3c87e;font-weight:700;
+        font-size:13.5px;letter-spacing:.04em;padding:10px 22px;border-radius:999px;text-decoration:none;
+        box-shadow:0 10px 30px rgba(15,35,26,.3)">
+        🏆 NEW ローレル2.0 ― 24年検証で負け年ゼロ・月額200円 →</a>
       <a href="campaign/" style="display:inline-block;background:var(--gold);color:#1c1508;font-weight:700;
         font-size:13.5px;letter-spacing:.04em;padding:10px 22px;border-radius:999px;text-decoration:none;
         box-shadow:0 6px 24px rgba(201,163,76,.35)">
         📣 9〜11月、リオラ・フィリアが実質無料 →</a>
-      <a href="guide/" style="display:inline-block;border:1px solid var(--gold);color:var(--gold2);font-weight:700;
+      <a href="guide/" style="display:inline-block;border:1px solid var(--sun);color:#7a5c14;font-weight:700;
         font-size:13.5px;letter-spacing:.04em;padding:10px 22px;border-radius:999px;text-decoration:none">
         📷 口座開設ガイド(画像つき)</a>
     </div>
     <div class="kicker rv">ESORA EA SERIES</div>
     <h1 class="rv d1">増やし方には、<br>性格がある。</h1>
-    <p class="lead rv d2">爆発のローレル。光のリオラ。蝶のフィリア。<br>
-      三つのEA、三つの資産曲線。都合の悪いドローダウンまで、リアルタイムで全部見せます。</p>
+    <p class="lead rv d2">爆発のローレル、その進化形ローレル2.0。光のリオラ。蝶のフィリア。<br>
+      四つのEA、四つの資産曲線。都合の悪いドローダウンまで、リアルタイムで全部見せます。</p>
     <div class="hero-triad rv d3">
+      <a class="triad" href="#laurel2">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#b98a2e" stroke-width="2.4" stroke-linecap="round">
+          <path d="M50 88 C30 70 24 48 30 22"/><path d="M50 88 C70 70 76 48 70 22"/>
+          <path d="M31 34 q-12 -4 -14 -14 q12 0 14 14z" fill="#b98a2e" stroke="none"/>
+          <path d="M33 48 q-13 -2 -17 -12 q13 -1 17 12z" fill="#b98a2e" stroke="none"/>
+          <path d="M37 61 q-13 1 -19 -9 q13 -3 19 9z" fill="#b98a2e" stroke="none"/>
+          <path d="M69 34 q12 -4 14 -14 q-12 0 -14 14z" fill="#b98a2e" stroke="none"/>
+          <path d="M67 48 q13 -2 17 -12 q-13 -1 -17 12z" fill="#b98a2e" stroke="none"/>
+          <path d="M63 61 q13 1 19 -9 q-13 -3 -19 9z" fill="#b98a2e" stroke="none"/>
+          <text x="50" y="58" text-anchor="middle" font-size="22" font-weight="700" fill="#0f231a" stroke="none" font-family="Georgia,serif">2.0</text>
+        </svg>
+        <span>LAUREL 2.0</span><em>爆発型・負け年ゼロ</em>
+      </a>
       <a class="triad" href="#laurel">
         <svg viewBox="0 0 100 100" fill="none" stroke="#c9a34c" stroke-width="2.4" stroke-linecap="round">
           <path d="M50 88 C30 70 24 48 30 22"/><path d="M50 88 C70 70 76 48 70 22"/>
@@ -322,6 +408,68 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
   </div>
 </section>
 
+<!-- ================= LAUREL 2.0 ================= -->
+<section id="laurel2" class="ea">
+  <div class="wrap">
+    <div class="label rv" style="color:#8a651c">00 — THE EVOLUTION</div>
+    <h2 class="rv">LAUREL 2.0</h2>
+    <div class="yomi rv">ローレル 2.0 ― 進化した月桂樹</div><br>
+    <span class="type rv d1">爆発型・負けない設計</span>
+    <div class="unbeaten rv d1">
+      <svg class="emblem" viewBox="0 0 100 100" fill="none" stroke="#e3c87e" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+        <path d="M50 92 C26 72 18 46 26 16"/><path d="M50 92 C74 72 82 46 74 16"/>
+        <g fill="#e3c87e" stroke="none"><path d="M27 28 q-13 -4 -15 -16 q13 0 15 16z"/><path d="M28 42 q-14 -2 -18 -13 q14 -1 18 13z"/><path d="M32 56 q-14 1 -20 -10 q14 -3 20 10z"/><path d="M38 69 q-13 4 -21 -6 q13 -5 21 6z"/><path d="M46 80 q-11 6 -21 -2 q11 -7 21 2z"/><path d="M73 28 q13 -4 15 -16 q-13 0 -15 16z"/><path d="M72 42 q14 -2 18 -13 q-14 -1 -18 13z"/><path d="M68 56 q14 1 20 -10 q-14 -3 -20 10z"/><path d="M62 69 q13 4 21 -6 q-13 -5 -21 6z"/><path d="M54 80 q11 6 21 -2 q-11 -7 -21 2z"/></g>
+      </svg>
+      <div class="big">2003年から2026年まで。<br><b>24年間、負けた年はゼロ。</b></div>
+      <div class="sm">※各年を$10,000から独立してスタートさせた24本の実ティック・バックテスト（スプレッド・手数料・スリッページ込み）で、24年すべてがプラスで終了。旧ローレルは同条件で3年が負け（2015・2023・2026年）。過去検証の結果であり将来の成績を保証するものではありません。</div>
+    </div>
+    <p class="copy rv d2">ローレルの爆発力は、そのまま。負けるときの深さだけを、削った。<br>
+      取引する日・ロジックの本体・裁量ゼロの運用は旧ローレルと同一のまま、22年分のデータで見つかった「負けを深くしていた部分」だけを修正。
+      年間ドローダウンの平均は52%から44%へ、最悪年（2008年）は82%から66%へ。それでいて年率は落ちていません。
+      ロジックの詳細は流出防止のため非公開です。</p>
+    <div class="stats rv d2">
+      <div class="stat"><div class="l">年間成績（バックテスト）</div><div class="n">24勝0敗</div><div class="s">2003〜2026年・各年独立BT。旧ローレルは21勝3敗</div></div>
+      <div class="stat"><div class="l">年間平均ドローダウン</div><div class="n">44%</div><div class="s">旧ローレル 52%（同条件BT）。最悪年 66%（旧 82%）</div></div>
+      <div class="stat"><div class="l">プロフィットファクター</div><div class="n">1.64</div><div class="s">24年平均。旧ローレル 1.49</div></div>
+      <div class="stat"><div class="l">年率（24年の複利換算）</div><div class="n">旧と同等以上</div><div class="s">爆発力は維持。勝ち年は数倍〜数十倍</div></div>
+      <div class="stat"><div class="l">料金</div><div class="n">月額¥200</div><div class="s">勝敗に関わらず定額・いつでも解除可</div></div>
+    </div>
+    <div class="label rv d2" style="color:#8a651c;font-size:11px;margin-bottom:4px">HOW TO CHOOSE ― 旧ローレルとの使い分け</div>
+    <div class="choice rv d2">
+      <div><b>① 旧ローレルをそのまま続ける</b><p>これまで通り利用できます。ルールも料金体系も変わりません。</p></div>
+      <div><b>② 両方を使う</b><p>口座を分けて、旧ローレルと2.0を並走。値動きに対する反応の違いをそのまま比べられます。</p></div>
+      <div><b>③ 2.0に完全移行する</b><p>旧ローレルの紐づけを解除し、2.0を紐づけ。LINE・X・DiscordのDMで「2.0へ移行希望＋口座番号」を送るだけ。費用はかかりません。</p></div>
+    </div>
+    <div class="vs rv d3">
+      <table>
+        <thead><tr><th></th><th>旧ローレル</th><th>LAUREL 2.0</th></tr></thead>
+        <tbody>
+          <tr><th>負け年（24年中・BT）</th><td class="old">3年</td><td class="new">0年</td></tr>
+          <tr><th>年間DD 平均</th><td class="old">52%</td><td class="new">44%</td></tr>
+          <tr><th>年間DD 最悪年</th><td class="old">82%（2008）</td><td class="new">66%（2008）</td></tr>
+          <tr><th>プロフィットファクター</th><td class="old">1.49</td><td class="new">1.64</td></tr>
+          <tr><th>2015年以降の年率</th><td class="old">126%</td><td class="new">210%</td></tr>
+          <tr><th>取引する日・ロジック本体</th><td class="old">―</td><td class="new">同一</td></tr>
+          <tr><th>料金</th><td class="old">3ヶ月無料→利益到達時後払い</td><td class="new">月額¥200</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="rv d3" style="margin-top:34px">
+      <div class="label" style="color:#8a651c;font-size:11px;margin-bottom:12px">LIVE ― Myfxbookリアルタイム成績</div>
+      <div id="laurel2-mfb">
+        <div class="soon">
+          <div class="t">FORWARD — STARTING</div>
+          <p style="font-size:13px;opacity:.75">ローレル2.0のMyfxbookリアルタイム計測は稼働開始次第ここに表示します。<br>旧ローレル同様、第三者計測で全て公開します。</p>
+        </div>
+      </div>
+      <div class="btnrow">
+        <a class="btn gold" href="#start">ローレル2.0で始める → 始め方へ</a>
+        <a class="btn line js-cta-line" href="#" target="_blank" rel="noopener" style="color:#7a5c14;border-color:#7a5c14">旧ローレルから移行を申し込む（DM）</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= LAUREL ================= -->
 <section id="laurel" class="ea">
   <svg class="wreath" viewBox="0 0 100 100" fill="none" stroke="#c9a34c" stroke-width="1.6" stroke-linecap="round">
@@ -336,10 +484,11 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
     </g>
   </svg>
   <div class="wrap">
-    <div class="label rv" style="color:#c9a34c">01 — THE EXPLOSIVE</div>
+    <div class="label rv" style="color:#c9a34c">01 — THE ORIGINAL</div>
     <h2 class="rv">LAUREL</h2>
     <div class="yomi rv">ローレル ― 月桂樹</div><br>
     <span class="type rv d1">爆発型</span>
+    <p class="copy rv d2" style="font-size:14px;margin-bottom:18px;color:#e3c87e">原点はこれからも継続提供します。負けを浅くした進化形は <a href="#laurel2" style="color:#fff3c4;font-weight:700">LAUREL 2.0</a> へ。</p>
     <p class="copy rv d2">勝つ年は、桁が違う。<br>
       勝利の冠・月桂樹の名を持つシリーズの原点。短期の爆発力はシリーズ随一 ―
       そして2003年からの20年以上の検証では、深い谷と回復を繰り返しながら長期でも資産を積み上げてきました。
@@ -458,29 +607,32 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
 <section id="compare">
   <div class="wrap">
     <div class="kicker rv">COMPARISON</div>
-    <h2 class="rv d1">3本の性格を、数字で並べる。</h2>
+    <h2 class="rv d1">4本の性格を、数字で並べる。</h2>
     <div class="tbl rv d2">
     <table>
       <thead><tr><th></th>
+        <th>LAUREL 2.0<span class="sub">爆発型・負けない設計</span></th>
         <th>LAUREL<span class="sub">爆発型</span></th>
         <th>LIORA<span class="sub">中間型</span></th>
         <th>PHILIA<span class="sub">コツコツ型</span></th>
       </tr></thead>
       <tbody>
-        <tr><th>モチーフ</th><td class="lau">月桂樹</td><td class="lio">光</td><td class="phi">蝶</td></tr>
-        <tr><th>リターン特性</th><td class="lau"><b class="pos">短期爆発＋長期も右肩</b><br>勝ち年 3〜4倍</td><td class="lio"><b>長期堅実</b><br>実運用 2〜3倍/年 想定</td><td class="phi"><b>長期複利</b><br>×28,478（BT）</td></tr>
-        <tr><th>ドローダウン</th><td class="lau"><b class="neg">実績 72.65%</b><br>最大級を覚悟</td><td class="lio"><b class="neg">平均 約40%</b><br>稀に50〜60%</td><td class="phi"><b class="neg">年平均 27.3%</b><br>最大年 50.3%（2007）</td></tr>
-        <tr><th>フォワード実績</th><td class="lau">×20（2024–25年）<br>現在値はMyfxbookで公開中</td><td class="lio">+175%（2025.4〜）<br>現在値はMyfxbookで公開中</td><td class="phi">計測開始<br>Myfxbookで公開中</td></tr>
-        <tr><th>バックテスト期間</th><td class="lau">2003年〜<br>20年以上</td><td class="lio">2003年〜<br>20年以上</td><td class="phi">2003年〜<br>20年以上</td></tr>
-        <tr><th>プロフィットファクター</th><td class="lau"><b>1.48</b></td><td class="lio"><b>1.76</b></td><td class="phi"><b>2.02</b></td></tr>
-        <tr><th>費用</th><td class="lau">3ヶ月無料<br><span style="opacity:.75">以降は利益到達時のみ後払い</span></td><td class="lio">月額3,000円</td><td class="phi"><b>先行 月額500円</b><br><span style="opacity:.75">1年後に通常3,000円へ</span></td></tr>
-        <tr><th>推奨資金</th><td class="lau">30万円〜</td><td class="lio">20万円〜</td><td class="phi">20万円〜</td></tr>
-        <tr><th>運用環境</th><td class="lau">VPS推奨<br><span style="opacity:.75">月数百円のプランで可</span></td><td class="lio">VPS不要<br><span style="opacity:.75">スマホのみでOK</span></td><td class="phi">VPS不要<br><span style="opacity:.75">スマホのみでOK</span></td></tr>
-        <tr><th>向いている人</th><td class="lau">最短で増やしたい<br>深いDDに耐えられる</td><td class="lio">バランス重視<br>長く続けたい</td><td class="phi">なるべく浅い傷で<br>積立感覚で増やしたい</td></tr>
+        <tr><th>モチーフ</th><td class="l2">進化した月桂樹</td><td class="lau">月桂樹</td><td class="lio">光</td><td class="phi">蝶</td></tr>
+        <tr><th>リターン特性</th><td class="l2"><b class="pos">爆発力そのまま</b><br>勝ち年は数倍〜数十倍</td><td class="lau"><b class="pos">短期爆発＋長期も右肩</b><br>勝ち年 3〜4倍</td><td class="lio"><b>長期堅実</b><br>実運用 2〜3倍/年 想定</td><td class="phi"><b>長期複利</b><br>×28,478（BT）</td></tr>
+        <tr><th>年間成績（BT）</th><td class="l2"><b class="pos">24勝0敗</b><br>2003〜2026年</td><td class="lau">21勝3敗<br>2003〜2026年</td><td class="lio">16勝4敗<br>2006〜2025年</td><td class="phi">20勝3敗<br>2003〜2025年</td></tr>
+        <tr><th>ドローダウン</th><td class="l2"><b class="neg">年平均 44%</b><br>最悪年 66%（2008）</td><td class="lau"><b class="neg">実績 72.65%</b><br>最大級を覚悟</td><td class="lio"><b class="neg">平均 約40%</b><br>稀に50〜60%</td><td class="phi"><b class="neg">年平均 27.3%</b><br>最大年 50.3%（2007）</td></tr>
+        <tr><th>フォワード実績</th><td class="l2">計測開始<br>Myfxbookで公開予定</td><td class="lau">×20（2024–25年）<br>現在値はMyfxbookで公開中</td><td class="lio">+175%（2025.4〜）<br>現在値はMyfxbookで公開中</td><td class="phi">計測開始<br>Myfxbookで公開中</td></tr>
+        <tr><th>バックテスト期間</th><td class="l2">2003年〜<br>24年</td><td class="lau">2003年〜<br>20年以上</td><td class="lio">2003年〜<br>20年以上</td><td class="phi">2003年〜<br>20年以上</td></tr>
+        <tr><th>プロフィットファクター</th><td class="l2"><b>1.64</b></td><td class="lau"><b>1.48</b></td><td class="lio"><b>1.76</b></td><td class="phi"><b>2.02</b></td></tr>
+        <tr><th>費用</th><td class="l2"><b>月額200円</b></td><td class="lau">3ヶ月無料<br><span style="opacity:.75">以降は利益到達時のみ後払い</span></td><td class="lio">月額3,000円</td><td class="phi"><b>先行 月額500円</b><br><span style="opacity:.75">1年後に通常3,000円へ</span></td></tr>
+        <tr><th>推奨資金</th><td class="l2">30万円〜</td><td class="lau">30万円〜</td><td class="lio">20万円〜</td><td class="phi">20万円〜</td></tr>
+        <tr><th>運用環境</th><td class="l2">VPS推奨<br><span style="opacity:.75">月数百円のプランで可</span></td><td class="lau">VPS推奨<br><span style="opacity:.75">月数百円のプランで可</span></td><td class="lio">VPS不要<br><span style="opacity:.75">スマホのみでOK</span></td><td class="phi">VPS不要<br><span style="opacity:.75">スマホのみでOK</span></td></tr>
+        <tr><th>向いている人</th><td class="l2">爆発力は欲しいが<br>負けは浅くしたい</td><td class="lau">最短で増やしたい<br>深いDDに耐えられる</td><td class="lio">バランス重視<br>長く続けたい</td><td class="phi">なるべく浅い傷で<br>積立感覚で増やしたい</td></tr>
       </tbody>
     </table>
     </div>
     <div class="who rv d3">
+      <a href="#laurel2"><div class="q">「爆発力は欲しい。でも負けたくない」</div><div class="a">24年の検証で負け年ゼロ。ローレルの進化形を月額200円で。</div><div class="nm">→ LAUREL 2.0</div></a>
       <a href="#laurel"><div class="q">「一発の爆発力がほしい」</div><div class="a">資産が半分以下になる期間も想定内。それでも爆発力を最優先するなら。</div><div class="nm">→ LAUREL</div></a>
       <a href="#liora"><div class="q">「現実的に、長く増やしたい」</div><div class="a">DD40%を受け入れて、年2〜3倍ペースを狙う王道バランス。</div><div class="nm">→ LIORA</div></a>
       <a href="#philia"><div class="q">「心を削らず積み上げたい」</div><div class="a">シリーズ最浅の年平均DD27.3%。積立感覚でコツコツ派に。</div><div class="nm">→ PHILIA</div></a>
@@ -607,7 +759,7 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
     <p class="rv d1" style="opacity:.8;max-width:640px">どのEAも、指定リンクからのTradeview口座開設が参加条件です。口座開設・維持費は無料。</p>
     <div class="steps rv d2">
       <div class="step"><b>Tradeview口座を開設</b><p>下の公式リンクから開設（IB: <code>5233450</code> 指定）。口座タイプは <code>MT4 / Innovative Liquidity Connector</code>、口座通貨はUSD推奨。レバレッジは<b>開設後に会員ページで200倍へ変更</b>します（画像つきガイド参照）。</p></div>
-      <div class="step"><b>資金を入金</b><p>ローレルは30万円〜、リオラ・PHILIAは20万円〜を推奨。EAごとに口座は必ず分けてください。</p></div>
+      <div class="step"><b>資金を入金</b><p>ローレル・ローレル2.0は30万円〜、リオラ・PHILIAは20万円〜を推奨。EAごとに口座は必ず分けてください（旧ローレルと2.0の並走も別口座で）。</p></div>
       <div class="step"><b>LINE・X・DiscordのDMで申告</b><p>公式LINE・X・DiscordいずれかのDMで「希望EA名＋口座番号」を送信。設定方法をご案内します。どれでもOKです。</p></div>
       <div class="step"><b>稼働開始</b><p>リオラ・PHILIAはVPS不要・スマホのみでOK。ローレルはVPS推奨（月数百円のプランで可）。あとは成績をMyfxbookで見守るだけ。</p></div>
     </div>
@@ -616,6 +768,10 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
       <p>新規開設ではなく<b>追加口座の開設</b>でOKです。申請フォームの「その他の連絡事項」欄に
       <code>5233450</code> と記入して、IBの紐づけをご指定ください（記入がないと参加条件を満たせません）。
       入金後、LINE・X・DiscordいずれかのDMで口座番号をご連絡ください。</p>
+    </div>
+    <div class="already rv d2">
+      <b>旧ローレルからローレル2.0へ移行したい方へ</b>
+      <p>①そのまま旧ローレルを続ける ②追加口座で2.0を並走 ③完全移行、の3択です。完全移行はDMで「2.0へ移行希望＋口座番号」を送っていただければ、旧ローレルの紐づけを解除して2.0を紐づけます（手数料なし・月額200円のみ）。</p>
     </div>
     <div class="already rv d2" style="text-align:center;max-width:640px;margin-left:auto;margin-right:auto">
       <b>📷 口座開設のやり方がわからない方へ</b>
@@ -637,7 +793,7 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
   <div class="wrap">
     <h3>DISCLAIMER — リスク開示・免責事項</h3>
     <p>・【リスク】FX証拠金取引はレバレッジ効果により大きな利益が期待できる一方、預託した証拠金を上回る損失が生じるおそれのあるハイリスクな取引です。元本および利益は一切保証されません。生活資金・借入資金での運用は絶対にしないでください。</p>
-    <p>・【過去実績】当サイトに記載のバックテストおよびフォワードの成績はすべて過去の実績であり、将来の運用成果を示唆・保証するものではありません。数値の根拠: MT4実ティックバックテスト（モデリング品質99%以上）およびMyfxbookによる第三者計測。「年間平均DD27.3%」は2003〜2025年の各年独立バックテスト23本の最大ドローダウンの単純平均です。</p>
+    <p>・【過去実績】当サイトに記載のバックテストおよびフォワードの成績はすべて過去の実績であり、将来の運用成果を示唆・保証するものではありません。数値の根拠: MT4実ティックバックテスト（モデリング品質99%以上）およびMyfxbookによる第三者計測。「年間平均DD27.3%」は2003〜2025年の各年独立バックテスト23本の最大ドローダウンの単純平均です。ローレル2.0の「24年間負けた年ゼロ」「年間平均DD44%」「PF1.64」は、2003〜2026年（2026年は6月まで）の各年を$10,000から独立してスタートさせたバックテスト24本の結果であり、実運用（フォワード）の実績ではありません。ローレル2.0のフォワード実績は計測開始後にMyfxbookで公開します。</p>
     <p>・【シミュレーション】「机上シミュレーション」の金額は、明示した仮定レートで毎年一定に増えたと仮定した計算例であり、将来の成果の予測ではありません。実際の運用ではドローダウンにより資金の大半を失う可能性があります。</p>
     <p>・【投資助言について】当サイトの運営者は金融商品取引法上の投資助言・代理業/投資運用業の登録を受けておらず、個別の投資助言・投資運用は行いません。EAはソフトウェアとして提供されるものであり、その利用・設定・口座開設・運用資金額等の最終判断は、すべて利用者ご自身の判断と責任で行ってください。LINE・SNS等でのご案内は一般的な情報提供です。</p>
     <p>・【利益関係の開示】当サイトはTradeviewの紹介者（IB）であり、当サイト経由の口座開設・お取引に応じてTradeviewから報酬を受け取ることがあります。</p>
@@ -658,8 +814,19 @@ const CONFIG = {
   xUrl: 'https://x.com/ichikaFX',       // XアカウントURL（DM窓口）
   toranomakiUrl: 'https://drive.google.com/file/d/12_iR8QQgLIbgQZPFimapSSdXlC9Sh4Cz/view?usp=drive_link', // 虎の巻PDF
   philiaMyfxbookUrl: 'https://www.myfxbook.com/members/ichika_FX/philia/12099219', // PHILIAのMyfxbookページ
-  philiaWidgetId: '12099219'        // PHILIAのMyfxbookアカウントID
+  philiaWidgetId: '12099219',       // PHILIAのMyfxbookアカウントID
+  laurel2MyfxbookUrl: '',           // ローレル2.0のMyfxbookページ（稼働開始後に入れる）
+  laurel2WidgetId: ''               // ローレル2.0のMyfxbookアカウントID（入れると自動でライブチャート表示）
 };
+
+/* ローレル2.0のMyfxbookが用意できたら自動でライブチャートに差し替え */
+if (CONFIG.laurel2WidgetId) {
+  document.getElementById('laurel2-mfb').innerHTML =
+    `<a class="mfb-card" href="${CONFIG.laurel2MyfxbookUrl || '#'}" target="_blank" rel="noopener" style="display:block">
+       <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/${CONFIG.laurel2WidgetId}/large.jpg" alt="ローレル2.0 Myfxbookリアルタイムチャート" loading="lazy"></div>
+     </a>
+     <div class="mfb-note">クリックでMyfxbookの検証済みフル成績へ（第三者計測・毎日自動更新）</div>`;
+}
 
 /* CTAリンク差し込み */
 if (CONFIG.tradeviewUrl) document.querySelectorAll('.js-cta-tv').forEach(a => { a.href = CONFIG.tradeviewUrl; a.target = '_blank'; });
