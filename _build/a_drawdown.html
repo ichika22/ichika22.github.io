@@ -1,0 +1,47 @@
+<header>
+  <div class="kicker">Risk math</div>
+  <h1>Why a 20% loss needs a 25% gain to recover</h1>
+  <p class="sub">The drawdown recovery table every EA buyer and copy trader should know.</p>
+  <p class="meta">Published Oct 21, 2026 · 5 min read</p>
+</header>
+<article>
+<p>Losses and gains are not symmetric. If an account drops 20%, it now has 80% of its starting balance. To get back to 100%, those 80 units must grow by 20 units, which is <b>25%</b> of 80, not 20%.</p>
+
+<h2>The formula</h2>
+<p>Required gain to recover = <b>loss ÷ (1 − loss)</b>.</p>
+<p>The deeper the drawdown, the faster the required gain grows:</p>
+<table>
+  <tr><th>Drawdown</th><th>Gain needed to get back to the peak</th></tr>
+  <tr><td>10%</td><td>11.1%</td></tr>
+  <tr><td>20%</td><td>25.0%</td></tr>
+  <tr><td>30%</td><td>42.9%</td></tr>
+  <tr><td>40%</td><td>66.7%</td></tr>
+  <tr><td>50%</td><td>100%</td></tr>
+  <tr><td>60%</td><td>150%</td></tr>
+  <tr><td>70%</td><td>233%</td></tr>
+  <tr><td>80%</td><td>400%</td></tr>
+  <tr><td>90%</td><td>900%</td></tr>
+</table>
+
+<h2>What this means when you judge an EA</h2>
+<ul>
+  <li><b>Read the max drawdown before the gain.</b> A system showing +300% with an 80% drawdown went through a period where it needed +400% just to break even again.</li>
+  <li><b>Your entry date matters.</b> Someone who started near a peak lived through the full drawdown. Someone who started at the bottom saw only the recovery. The same public track record can mean very different results for different followers.</li>
+  <li><b>Time is part of the cost.</b> Recovering from a deep drawdown can take months. Ask yourself whether you would really keep the EA running through that.</li>
+</ul>
+
+<h2>A real example from my own accounts</h2>
+<p>One of my EAs, LAUREL, is an aggressive system. Its public Myfxbook record shows a large total gain, and also a realized maximum drawdown of about 82%. By the table above, an 82% drawdown requires roughly a 460% gain to get back to the previous peak. I publish that number on purpose: if you only look at the gain, you are not seeing the risk you would actually live through.</p>
+<div class="tip">You can check the current figures yourself on the <a href="https://www.myfxbook.com/members/ichika_FX" target="_blank" rel="noopener">public Myfxbook profile</a>. Figures change every week; always check the update date.</div>
+
+<h2>Balance drawdown vs equity drawdown</h2>
+<p>Some reports show drawdown on <b>balance</b> (closed trades only). Others use <b>equity</b>, which includes floating losses on open positions. Grid and martingale-style systems can look calm on balance while equity drops sharply. When you compare systems, make sure you compare the same kind of drawdown.</p>
+
+<h2>Practical rules</h2>
+<ol>
+  <li>Decide in advance the maximum drawdown you can tolerate, in money, not just in percent.</li>
+  <li>Size your account or lot so that the system's historical max drawdown stays within that limit, and assume the future max can be worse.</li>
+  <li>Never add money only because a system is in a drawdown, unless that was your plan before you started.</li>
+</ol>
+<div class="warn">Past drawdowns are not a ceiling. A live system can exceed its previous maximum drawdown at any time.</div>
+</article>
