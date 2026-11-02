@@ -123,6 +123,17 @@ nav .cta{background:var(--gold);color:#1c1508;text-decoration:none;font-weight:7
 .mfb-card .crop{overflow:hidden;aspect-ratio:1000/460;background:rgba(120,110,90,.12)}
 .mfb-card .crop img{width:100%;margin-top:-5.2%}
 .mfb-note{font-size:12px;opacity:.7;margin-top:10px}
+.reccard{margin-top:24px;max-width:660px;border:1px solid rgba(201,163,76,.5);border-radius:12px;padding:18px 18px 14px;background:rgba(201,163,76,.08)}
+.reccard .rh{font-size:12px;letter-spacing:.12em;opacity:.8;margin-bottom:12px}
+.reccard .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.reccard .rg>div{padding:10px 8px;border-radius:8px;background:rgba(255,255,255,.06)}
+.reccard .rc{border:1px solid rgba(201,163,76,.6)}
+.reccard .rl{font-size:11.5px;opacity:.75;line-height:1.4}
+.reccard .rn{font-family:var(--serif);font-size:22px;font-weight:600;margin:6px 0 2px}
+.reccard .rs{font-size:11.5px;opacity:.8}
+.reccard a{font-size:12px;color:inherit;text-decoration:underline;display:inline-block;margin-top:6px}
+.reccard .rf{font-size:11px;opacity:.65;margin-top:10px;line-height:1.7}
+@media(max-width:560px){.reccard{padding:14px 10px}.reccard .rn{font-size:17px}.reccard .rg{gap:6px}}
 .btnrow{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
 .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.12em;
   padding:15px 34px;border-radius:2px;transition:transform .25s ease,box-shadow .25s ease}
@@ -528,6 +539,15 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
           <p style="font-size:13px;opacity:.75">ローレル2.0のMyfxbookリアルタイム計測は稼働開始次第ここに表示します。<br>旧ローレル同様、第三者計測で全て公開します。</p>
         </div>
       </div>
+      <div class="reccard">
+        <div class="rh">旧口座・新口座・通算の成績</div>
+        <div class="rg">
+          <div><div class="rl">旧口座<br><small>〜2026/10/21</small></div><div class="rn">+7.97%</div><div class="rs">最大DD 21.47%</div><a href="https://www.myfxbook.com/members/ichika_FX/laurel20/12215515" target="_blank" rel="noopener">旧Myfxbookを見る</a></div>
+          <div><div class="rl">新口座<br><small>2026/10下旬〜</small></div><div class="rn">+2.53%</div><div class="rs">最大DD 4.68%</div><a href="https://www.myfxbook.com/members/ichika_FX/laurel20/12290520" target="_blank" rel="noopener">新Myfxbookを見る</a></div>
+          <div class="rc"><div class="rl">通算<br><small>旧×新</small></div><div class="rn">+10.7%</div><div class="rs">最大DD 21.47%以上</div></div>
+        </div>
+        <div class="rf">2026年11月2日時点のMyfxbook表示。通算＝(1＋旧)×(1＋新)−1、通算の最大DDは旧口座の値以上。<a href="#record">移行の経緯</a></div>
+      </div>
       <div class="btnrow">
         <a class="btn gold" href="#start">ローレル2.0で始める → 始め方へ</a>
         <a class="btn line js-cta-line" href="#" target="_blank" rel="noopener" style="color:#7a5c14;border-color:#7a5c14">旧ローレルから移行を申し込む（DM）</a>
@@ -579,6 +599,15 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
         <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/12290460/large.jpg" alt="ローレル Myfxbookリアルタイムチャート" loading="lazy"></div>
       </a>
       <div class="mfb-note">クリックでMyfxbookの検証済みフル成績へ（第三者計測・毎日自動更新）。2026年10月に新口座へ移行しました。旧口座の記録と通算成績は <a href="#record">こちら</a></div>
+      <div class="reccard">
+        <div class="rh">旧口座・新口座・通算の成績</div>
+        <div class="rg">
+          <div><div class="rl">旧口座<br><small>〜2026/10/21</small></div><div class="rn">+262.51%</div><div class="rs">最大DD 82.57%</div><a href="https://www.myfxbook.com/members/ichika_FX/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%AB/12014181" target="_blank" rel="noopener">旧Myfxbookを見る</a></div>
+          <div><div class="rl">新口座<br><small>2026/10下旬〜</small></div><div class="rn">-3.31%</div><div class="rs">最大DD 8.36%</div><a href="https://www.myfxbook.com/members/ichika_FX/laurel/12290460" target="_blank" rel="noopener">新Myfxbookを見る</a></div>
+          <div class="rc"><div class="rl">通算<br><small>旧×新</small></div><div class="rn">+250.5%</div><div class="rs">最大DD 82.57%以上</div></div>
+        </div>
+        <div class="rf">2026年11月2日時点のMyfxbook表示。通算＝(1＋旧)×(1＋新)−1、通算の最大DDは旧口座の値以上。<a href="#record">移行の経緯</a></div>
+      </div>
       <div class="btnrow">
         <a class="btn gold" href="#start">ローレルで口座開設する → 始め方へ</a>
         <a class="btn line" href="https://www.myfxbook.com/members/ichika_FX/laurel/12290460" target="_blank" rel="noopener">リアルタイム成績を見る</a>
@@ -612,6 +641,15 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
         <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/12290478/large.jpg" alt="リオラ Myfxbookリアルタイムチャート" loading="lazy"></div>
       </a>
       <div class="mfb-note">クリックでMyfxbookの検証済みフル成績へ（第三者計測・毎日自動更新）。2026年10月に新口座へ移行しました。旧口座の記録と通算成績は <a href="#record">こちら</a></div>
+      <div class="reccard">
+        <div class="rh">旧口座・新口座・通算の成績</div>
+        <div class="rg">
+          <div><div class="rl">旧口座<br><small>〜2026/10/21</small></div><div class="rn">+201.3%※</div><div class="rs">最大DD 38.6%（不正取引前）</div><a href="https://www.myfxbook.com/members/ichika_FX/liora/11663643" target="_blank" rel="noopener">旧Myfxbookを見る</a></div>
+          <div><div class="rl">新口座<br><small>2026/10下旬〜</small></div><div class="rn">-9.36%</div><div class="rs">最大DD 9.36%</div><a href="https://www.myfxbook.com/members/ichika_FX/liora/12290478" target="_blank" rel="noopener">新Myfxbookを見る</a></div>
+          <div class="rc"><div class="rl">通算<br><small>旧×新</small></div><div class="rn">+173.1%</div><div class="rs">最大DD 38.6%以上</div></div>
+        </div>
+        <div class="rf">2026年11月2日時点のMyfxbook表示。通算＝(1＋旧)×(1＋新)−1、通算の最大DDは旧口座の値以上。<a href="#record">移行の経緯</a><br>※LIORA旧口座のMyfxbook上の記録は不正取引を含め−99.53%。+201.3%は不正取引を除いた参考値です。</div>
+      </div>
       <div class="btnrow">
         <a class="btn gold" href="#start">リオラで口座開設する → 始め方へ</a>
         <a class="btn line" href="https://www.myfxbook.com/members/ichika_FX/liora/12290478" target="_blank" rel="noopener" style="color:#8a651c">リアルタイム成績を見る</a>
@@ -656,6 +694,15 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
           <div class="t">FORWARD — COMING SOON</div>
           <p style="font-size:13px;opacity:.75">PHILIAのMyfxbookリアルタイム計測は近日公開。<br>ローレル・リオラ同様、第三者計測で全て公開します。</p>
         </div>
+      </div>
+      <div class="reccard">
+        <div class="rh">旧口座・新口座・通算の成績</div>
+        <div class="rg">
+          <div><div class="rl">旧口座<br><small>〜2026/10/21</small></div><div class="rn">+11.00%</div><div class="rs">最大DD 6.50%</div><a href="https://www.myfxbook.com/members/ichika_FX/philia/12099219" target="_blank" rel="noopener">旧Myfxbookを見る</a></div>
+          <div><div class="rl">新口座<br><small>2026/10下旬〜</small></div><div class="rn">-3.50%</div><div class="rs">最大DD 3.50%</div><a href="https://www.myfxbook.com/members/ichika_FX/philia/12290493" target="_blank" rel="noopener">新Myfxbookを見る</a></div>
+          <div class="rc"><div class="rl">通算<br><small>旧×新</small></div><div class="rn">+7.1%</div><div class="rs">最大DD 6.50%以上</div></div>
+        </div>
+        <div class="rf">2026年11月2日時点のMyfxbook表示。通算＝(1＋旧)×(1＋新)−1、通算の最大DDは旧口座の値以上。<a href="#record">移行の経緯</a></div>
       </div>
       <div class="already" style="margin-top:26px;max-width:660px">
         <b>すでにローレル・リオラを稼働中の方へ</b>

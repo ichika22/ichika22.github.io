@@ -126,6 +126,17 @@ nav .cta{background:var(--gold);color:#1c1508;text-decoration:none;font-weight:7
 .mfb-card .crop{overflow:hidden;aspect-ratio:1000/460;background:rgba(120,110,90,.12)}
 .mfb-card .crop img{width:100%;margin-top:-5.2%}
 .mfb-note{font-size:12px;opacity:.7;margin-top:10px}
+.reccard{margin-top:24px;max-width:660px;border:1px solid rgba(201,163,76,.5);border-radius:12px;padding:18px 18px 14px;background:rgba(201,163,76,.08)}
+.reccard .rh{font-size:12px;letter-spacing:.12em;opacity:.8;margin-bottom:12px}
+.reccard .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.reccard .rg>div{padding:10px 8px;border-radius:8px;background:rgba(255,255,255,.06)}
+.reccard .rc{border:1px solid rgba(201,163,76,.6)}
+.reccard .rl{font-size:11.5px;opacity:.75;line-height:1.4}
+.reccard .rn{font-family:var(--serif);font-size:22px;font-weight:600;margin:6px 0 2px}
+.reccard .rs{font-size:11.5px;opacity:.8}
+.reccard a{font-size:12px;color:inherit;text-decoration:underline;display:inline-block;margin-top:6px}
+.reccard .rf{font-size:11px;opacity:.65;margin-top:10px;line-height:1.7}
+@media(max-width:560px){.reccard{padding:14px 10px}.reccard .rn{font-size:17px}.reccard .rg{gap:6px}}
 .btnrow{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
 .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.1em;
   padding:15px 34px;border-radius:2px;transition:transform .25s ease,box-shadow .25s ease}
@@ -519,6 +530,15 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
         <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/12290520/large.jpg" alt="LAUREL 2.0 Myfxbook live chart" loading="lazy"></div>
       </a>
       <div class="mfb-note">Click through for the full verified record (independent measurement, updated daily). Moved to a new account in Oct 2026 — old account and combined record <a href="#record">here</a></div>
+      <div class="reccard">
+        <div class="rh">Old account · new account · combined</div>
+        <div class="rg">
+          <div><div class="rl">Old account<br><small>to Oct 21, 2026</small></div><div class="rn">+7.97%</div><div class="rs">Max DD 21.47%</div><a href="https://www.myfxbook.com/members/ichika_FX/laurel20/12215515" target="_blank" rel="noopener">View old Myfxbook</a></div>
+          <div><div class="rl">New account<br><small>since late Oct 2026</small></div><div class="rn">+2.53%</div><div class="rs">Max DD 4.68%</div><a href="https://www.myfxbook.com/members/ichika_FX/laurel20/12290520" target="_blank" rel="noopener">View new Myfxbook</a></div>
+          <div class="rc"><div class="rl">Combined<br><small>old × new</small></div><div class="rn">+10.7%</div><div class="rs">Max DD ≥ 21.47%</div></div>
+        </div>
+        <div class="rf">As shown on Myfxbook, Nov 2, 2026. Combined = (1+old)×(1+new)−1; combined max DD is at least the old account's. <a href="#record">Why we moved</a></div>
+      </div>
       <div class="btnrow">
         <a class="btn gold" href="#start">Start with LAUREL 2.0 → How to begin</a>
         <a class="btn line" href="https://x.com/esora_ea" target="_blank" rel="noopener" style="color:#7a5c14;border-color:#7a5c14">Switch from LAUREL (DM us on X)</a>
@@ -570,6 +590,15 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
         <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/12290460/large.jpg" alt="LAUREL Myfxbook live chart" loading="lazy"></div>
       </a>
       <div class="mfb-note">Click through for the full verified track record (independent measurement, updated daily). Moved to a new account in Oct 2026 — old account and combined record <a href="#record">here</a></div>
+      <div class="reccard">
+        <div class="rh">Old account · new account · combined</div>
+        <div class="rg">
+          <div><div class="rl">Old account<br><small>to Oct 21, 2026</small></div><div class="rn">+262.51%</div><div class="rs">Max DD 82.57%</div><a href="https://www.myfxbook.com/members/ichika_FX/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%AB/12014181" target="_blank" rel="noopener">View old Myfxbook</a></div>
+          <div><div class="rl">New account<br><small>since late Oct 2026</small></div><div class="rn">-3.31%</div><div class="rs">Max DD 8.36%</div><a href="https://www.myfxbook.com/members/ichika_FX/laurel/12290460" target="_blank" rel="noopener">View new Myfxbook</a></div>
+          <div class="rc"><div class="rl">Combined<br><small>old × new</small></div><div class="rn">+250.5%</div><div class="rs">Max DD ≥ 82.57%</div></div>
+        </div>
+        <div class="rf">As shown on Myfxbook, Nov 2, 2026. Combined = (1+old)×(1+new)−1; combined max DD is at least the old account's. <a href="#record">Why we moved</a></div>
+      </div>
       <div class="btnrow">
         <a class="btn gold" href="#start">Start with LAUREL → How to begin</a>
         <a class="btn line" href="https://www.myfxbook.com/members/ichika_FX/laurel/12290460" target="_blank" rel="noopener">View live results</a>
@@ -604,6 +633,15 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
         <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/12290478/large.jpg" alt="LIORA Myfxbook live chart" loading="lazy"></div>
       </a>
       <div class="mfb-note">Click through for the full verified track record (independent measurement, updated daily). Moved to a new account in Oct 2026 — old account and combined record <a href="#record">here</a></div>
+      <div class="reccard">
+        <div class="rh">Old account · new account · combined</div>
+        <div class="rg">
+          <div><div class="rl">Old account<br><small>to Oct 21, 2026</small></div><div class="rn">+201.3%*</div><div class="rs">Max DD 38.6% (before unauthorized trades)</div><a href="https://www.myfxbook.com/members/ichika_FX/liora/11663643" target="_blank" rel="noopener">View old Myfxbook</a></div>
+          <div><div class="rl">New account<br><small>since late Oct 2026</small></div><div class="rn">-9.36%</div><div class="rs">Max DD 9.36%</div><a href="https://www.myfxbook.com/members/ichika_FX/liora/12290478" target="_blank" rel="noopener">View new Myfxbook</a></div>
+          <div class="rc"><div class="rl">Combined<br><small>old × new</small></div><div class="rn">+173.1%</div><div class="rs">Max DD ≥ 38.6%</div></div>
+        </div>
+        <div class="rf">As shown on Myfxbook, Nov 2, 2026. Combined = (1+old)×(1+new)−1; combined max DD is at least the old account's. <a href="#record">Why we moved</a><br>* The old LIORA page shows −99.53% including the unauthorized trades; +201.3% is our reference figure excluding them.</div>
+      </div>
       <div class="btnrow">
         <a class="btn gold" href="#start">Start with LIORA → How to begin</a>
         <a class="btn line" href="https://www.myfxbook.com/members/ichika_FX/liora/12290478" target="_blank" rel="noopener" style="color:#8a651c">View live results</a>
@@ -648,6 +686,15 @@ footer .fx{margin-top:26px;font-family:var(--serif);letter-spacing:.35em;font-si
         <div class="crop"><img class="js-live" src="https://widgets.myfxbook.com/widgets/12290493/large.jpg" alt="PHILIA Myfxbook live chart" loading="lazy"></div>
       </a>
       <div class="mfb-note">Click through for the full verified track record (independent measurement, updated daily). Moved to a new account in Oct 2026 — old account and combined record <a href="#record">here</a></div>
+      <div class="reccard">
+        <div class="rh">Old account · new account · combined</div>
+        <div class="rg">
+          <div><div class="rl">Old account<br><small>to Oct 21, 2026</small></div><div class="rn">+11.00%</div><div class="rs">Max DD 6.50%</div><a href="https://www.myfxbook.com/members/ichika_FX/philia/12099219" target="_blank" rel="noopener">View old Myfxbook</a></div>
+          <div><div class="rl">New account<br><small>since late Oct 2026</small></div><div class="rn">-3.50%</div><div class="rs">Max DD 3.50%</div><a href="https://www.myfxbook.com/members/ichika_FX/philia/12290493" target="_blank" rel="noopener">View new Myfxbook</a></div>
+          <div class="rc"><div class="rl">Combined<br><small>old × new</small></div><div class="rn">+7.1%</div><div class="rs">Max DD ≥ 6.50%</div></div>
+        </div>
+        <div class="rf">As shown on Myfxbook, Nov 2, 2026. Combined = (1+old)×(1+new)−1; combined max DD is at least the old account's. <a href="#record">Why we moved</a></div>
+      </div>
       <div class="already" style="margin-top:26px;max-width:660px">
         <b>Already running LAUREL or LIORA?</b>
         <p>Open an additional account, fund it, and DM us your account number on X or Discord. That's all it takes to start PHILIA.</p>
