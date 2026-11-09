@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+<defs><radialGradient id="sphere" cx=".3" cy=".24" r=".8"><stop stop-color="#dce4b6"/><stop offset=".34" stop-color="#869e70"/><stop offset=".66" stop-color="#345b45"/><stop offset="1" stop-color="#102c25"/></radialGradient><linearGradient id="metal" x1="70" y1="100" x2="500" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#f5e5b7"/><stop offset=".33" stop-color="#8d895d"/><stop offset=".6" stop-color="#e4d9ad"/><stop offset="1" stop-color="#4f7558"/></linearGradient><radialGradient id="halo"><stop stop-color="#c8d8a4" stop-opacity=".2"/><stop offset="1" stop-color="#b9d4a0" stop-opacity="0"/></radialGradient><filter id="blur"><feGaussianBlur stdDeviation="15"/></filter></defs>
+<circle cx="300" cy="300" r="287" fill="url(#halo)"/>
+<circle cx="300" cy="300" r="251" stroke="#d0d8ae" stroke-opacity=".13" stroke-dasharray="2 9"/>
+<path d="M300 26v30m0 488v30M26 300h30m488 0h30" stroke="#e3d4a8" stroke-opacity=".4"/>
+<ellipse cx="300" cy="457" rx="142" ry="29" fill="#061c17" opacity=".7" filter="url(#blur)"/>
+<ellipse cx="300" cy="300" rx="246" ry="104" transform="rotate(-43 300 300)" stroke="url(#metal)" stroke-width="2"/>
+<circle cx="300" cy="300" r="153" fill="url(#sphere)" stroke="#c9d2a7" stroke-opacity=".4"/>
+<g stroke="#dbe2bc" opacity=".22"><ellipse cx="300" cy="300" rx="111" ry="153" transform="rotate(26 300 300)"/><ellipse cx="300" cy="300" rx="56" ry="153" transform="rotate(26 300 300)"/><ellipse cx="300" cy="300" rx="153" ry="55" transform="rotate(26 300 300)"/><ellipse cx="300" cy="300" rx="153" ry="108" transform="rotate(26 300 300)"/></g>
+<path d="M90 241C-10 373 153 450 355 383s274-190 155-223" stroke="url(#metal)" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="300" cy="300" rx="234" ry="173" transform="rotate(39 300 300)" stroke="url(#metal)" stroke-opacity=".7"/>
+<circle cx="136" cy="141" r="32" fill="#153b2e" stroke="#b8bc8e"/><path d="m124 149 12-21 12 21m-19-6h14" stroke="#e6d8ab" stroke-width="1.5"/>
+<circle cx="479" cy="404" r="39" fill="#d9c793"/><path d="M462 407c7-3 11-10 11-17m-7 7-6-3m10 9-7 1m20 3c-7-3-11-10-11-17m7 7 6-3m-10 9 7 1" stroke="#294a34" stroke-width="1.5"/>
+<circle cx="485" cy="166" r="7" fill="#dfd2a2"/><circle cx="92" cy="341" r="5" fill="#c7d7a5"/><circle cx="255" cy="53" r="3" fill="#c7d7a5"/>
+</svg>
