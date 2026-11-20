@@ -1,0 +1,72 @@
+name: Refresh ESORA combined track records
+
+on:
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+
+permissions: {}
+concurrency:
+  group: esora-myfxbook-combined
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'ichika22/ichika22.github.io' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Prepare isolated data checkout
+        id: prepare
+        env:
+          MYFXBOOK_CONFIGURED: ${{ secrets.MYFXBOOK_EMAIL != '' && secrets.MYFXBOOK_PASSWORD != '' }}
+        run: |
+          set -euo pipefail
+          if [ "$MYFXBOOK_CONFIGURED" != true ]; then
+            echo "Myfxbook connection not configured; no figures changed."
+            exit 0
+          fi
+          branch=refs/heads/esora-performance-data
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null; then
+            git fetch --no-tags origin "$branch"
+            # Accept only the intended file, not a symlink, tree, or branch-level filter.
+            tree="$(git ls-tree FETCH_HEAD)"
+            if ! grep -Ex '100644 blob [0-9a-f]{40}[[:space:]]myfxbook-combined[.]json' <<<"$tree" >/dev/null \
+                || [ "$(wc -l <<<"$tree")" -ne 1 ]; then
+              echo "Unexpected data-branch content; no publication." >&2
+              exit 1
+            fi
+            GIT_ATTR_NOSYSTEM=1 git -c core.attributesFile=/dev/null -c core.hooksPath=/dev/null worktree add --detach "$RUNNER_TEMP/esora-performance-data" FETCH_HEAD
+            file="$RUNNER_TEMP/esora-performance-data/myfxbook-combined.json"
+            [ -f "$file" ] && [ ! -L "$file" ] || exit 1
+          else
+            rc=$?
+            if [ "$rc" -ne 2 ]; then exit "$rc"; fi
+            git worktree add --detach "$RUNNER_TEMP/esora-performance-data" HEAD
+            git -C "$RUNNER_TEMP/esora-performance-data" switch --orphan esora-performance-data
+          fi
+          echo "configured=true" >> "$GITHUB_OUTPUT"
+      - name: Read Myfxbook and validate public data
+        if: steps.prepare.outputs.configured == 'true'
+        env:
+          MYFXBOOK_EMAIL: ${{ secrets.MYFXBOOK_EMAIL }}
+          MYFXBOOK_PASSWORD: ${{ secrets.MYFXBOOK_PASSWORD }}
+        run: python3 scripts/refresh_myfxbook_combined.py "$RUNNER_TEMP/esora-performance-data/myfxbook-combined.json"
+      - name: Publish changed figures only
+        if: steps.prepare.outputs.configured == 'true'
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/esora-performance-data"
+          [ ! -L myfxbook-combined.json ] || exit 1
+          [ -f myfxbook-combined.json ] || exit 0
+          GIT_ATTR_NOSYSTEM=1 git -c core.attributesFile=/dev/null add -- myfxbook-combined.json
+          if [ "$(git ls-files)" != myfxbook-combined.json ]; then
+            echo "Unexpected data index; no publication." >&2
+            exit 1
+          fi
+          git diff --cached --quiet -- myfxbook-combined.json && exit 0
+          git -c core.hooksPath=/dev/null -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh Myfxbook combined track records'
+          git push origin HEAD:refs/heads/esora-performance-data
